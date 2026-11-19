@@ -449,50 +449,61 @@ export const LandingPage = ({
                       </div>
 
                       {/* SVG Canvas with Dynamic Themed Fill & Stroke */}
-                      <div className="w-full h-32 relative">
-                        <svg className="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 360 120">
+                      <div className="w-full h-36 relative select-none">
+                        <svg className="w-full h-full" viewBox="0 0 500 130" preserveAspectRatio="xMidYMid meet">
                           <defs>
                             <linearGradient id="heroTargetBandGrad" x1="0%" x2="0%" y1="0%" y2="100%">
-                              <stop offset="0%" stopColor="var(--secondary-container, #feaeba)" stopOpacity="0.35" />
-                              <stop offset="100%" stopColor="var(--secondary-container, #feaeba)" stopOpacity="0.08" />
+                              <stop offset="0%" stopColor="var(--secondary-container, #feaeba)" stopOpacity="0.32" />
+                              <stop offset="100%" stopColor="var(--secondary-container, #feaeba)" stopOpacity="0.06" />
                             </linearGradient>
                             <linearGradient id="heroLineGrad" x1="0%" x2="100%" y1="0%" y2="0%">
                               <stop offset="0%" stopColor="var(--secondary, #8a4c57)" />
-                              <stop offset="50%" stopColor="var(--primary, #ad2737)" />
+                              <stop offset="45%" stopColor="var(--primary, #ad2737)" />
                               <stop offset="100%" stopColor="var(--primary-container, #cf414d)" />
                             </linearGradient>
+                            <filter id="heroShadow" x="-10%" y="-10%" width="120%" height="120%">
+                              <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="var(--primary, #ad2737)" floodOpacity="0.25" />
+                            </filter>
                           </defs>
 
-                          {/* Target Corridor Box (70 to 140 mg/dL scaled roughly between y=35 and y=85) */}
-                          <rect x="0" y="32" width="360" height="52" rx="4" fill="url(#heroTargetBandGrad)" />
-                          <line x1="0" y1="32" x2="360" y2="32" stroke="var(--secondary-container, #feaeba)" strokeDasharray="3 3" strokeWidth="1" opacity="0.6" />
-                          <line x1="0" y1="84" x2="360" y2="84" stroke="var(--secondary-container, #feaeba)" strokeDasharray="3 3" strokeWidth="1" opacity="0.6" />
-                          <line x1="0" y1="16" x2="360" y2="16" stroke="var(--outline-variant, #e0bfbe)" strokeDasharray="2 2" strokeWidth="1" opacity="0.4" />
+                          {/* Target Corridor Band: 70–140 mg/dL */}
+                          <rect x="36" y="36" width="440" height="54" rx="8" fill="url(#heroTargetBandGrad)" />
+                          
+                          {/* Boundary Guide Lines */}
+                          <line x1="36" y1="36" x2="476" y2="36" stroke="var(--secondary-container, #feaeba)" strokeDasharray="3 3" strokeWidth="1.2" opacity="0.8" />
+                          <line x1="36" y1="90" x2="476" y2="90" stroke="var(--secondary-container, #feaeba)" strokeDasharray="3 3" strokeWidth="1.2" opacity="0.8" />
+                          <line x1="36" y1="18" x2="476" y2="18" stroke="var(--outline-variant, #e0bfbe)" strokeDasharray="2 2" strokeWidth="1" opacity="0.5" />
 
-                          {/* Target corridor numeric labels */}
-                          <text x="5" y="44" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans" fontSize="9" fontWeight="600">140</text>
-                          <text x="5" y="80" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans" fontSize="9" fontWeight="600">70</text>
-                          <text x="330" y="14" fill="var(--outline, #8c7070)" fontFamily="Inter" fontSize="7">180 (High)</text>
+                          {/* Corridor Y-Axis Labels */}
+                          <text x="6" y="40" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="700">140</text>
+                          <text x="12" y="94" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="700">70</text>
+                          <text x="410" y="14" fill="var(--outline, #8c7070)" fontFamily="Inter, sans-serif" fontSize="9" fontWeight="600">180 (High)</text>
 
-                          {/* Continuous AGP Spline Wave Curve */}
+                          {/* Continuous Smooth AGP Spline Curve */}
                           <path
-                            d="M 0,65 Q 40,48 80,55 T 160,42 T 220,68 T 280,58 T 330,48 T 360,52"
+                            d="M 36,72 C 80,56 120,62 165,58 C 210,54 240,40 275,44 C 310,48 340,78 385,72 C 420,66 450,54 472,56"
                             fill="none"
                             stroke="url(#heroLineGrad)"
                             strokeLinecap="round"
-                            strokeWidth="3"
+                            strokeWidth="3.5"
+                            filter="url(#heroShadow)"
                           />
 
-                          {/* Real-time telemetry cursor */}
-                          <circle cx="360" cy="52" r="5" fill="var(--primary, #ad2737)" />
-                          <circle cx="360" cy="52" r="9" fill="var(--primary, #ad2737)" opacity="0.3" className="animate-ping" />
+                          {/* Real-time telemetry cursor & pulsing halo */}
+                          <circle cx="472" cy="56" r="5" fill="var(--primary, #ad2737)" />
+                          <circle cx="472" cy="56" r="10" fill="var(--primary, #ad2737)" opacity="0.25" className="animate-ping" />
 
                           {/* Excursion pin: Oatmeal + Protein marker */}
-                          <circle cx="160" cy="42" r="3" fill="#ffffff" stroke="var(--primary, #ad2737)" strokeWidth="2" />
-                          <line x1="160" y1="18" x2="160" y2="38" stroke="var(--on-surface-variant, #594141)" strokeDasharray="2 2" strokeWidth="1" opacity="0.5" />
-                          <text x="135" y="14" fill="var(--on-surface-variant, #594141)" fontFamily="Inter" fontSize="8" fontWeight="600">
-                            Oatmeal + Protein
-                          </text>
+                          <line x1="275" y1="20" x2="275" y2="44" stroke="var(--primary, #ad2737)" strokeDasharray="2 2" strokeWidth="1" opacity="0.6" />
+                          <circle cx="275" cy="44" r="4" fill="#ffffff" stroke="var(--primary, #ad2737)" strokeWidth="2.5" />
+                          
+                          {/* Badge Callout */}
+                          <g transform="translate(225, 4)">
+                            <rect x="0" y="0" width="102" height="18" rx="6" fill="var(--inverse-surface, #3d2c2f)" />
+                            <text x="51" y="12" fill="#ffffff" fontFamily="Inter, sans-serif" fontSize="8.5" fontWeight="700" textAnchor="middle">
+                              Oatmeal + Protein
+                            </text>
+                          </g>
                         </svg>
                       </div>
 

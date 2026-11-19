@@ -20,9 +20,7 @@ import {
 
 export const Sidebar = ({ 
   activeTab = 'dashboard', 
-  onSelectTab = () => {},
-  isOpen = false,
-  onClose = () => {}
+  onSelectTab = () => {}
 }) => {
   // 12 Clinical Navigation Items across 3 Sections matching Stitch specifications exactly
   const mainNav = [
@@ -46,49 +44,21 @@ export const Sidebar = ({
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
-  const handleItemClick = (tabId) => {
-    onSelectTab(tabId);
-    if (onClose) onClose();
-  };
-
   return (
-    <>
-      {/* Mobile Backdrop Overlay */}
-      {isOpen && (
-        <div
-          onClick={onClose}
-          className="fixed inset-0 bg-black/50 backdrop-blur-xs z-40 lg:hidden transition-opacity duration-200"
-          aria-hidden="true"
-        />
-      )}
-
-      <aside className={`fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between overflow-y-auto transition-transform duration-200 ease-in-out ${
-        isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'
-      }`}>
-        <div className="p-space-lg">
-          
-          {/* Brand Header with Mobile Close Button */}
-          <div className="flex items-center justify-between gap-space-sm mb-space-lg">
-            <div className="flex items-center gap-space-sm">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-xs">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-              </div>
-              <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">
-                Sweety
-              </span>
-            </div>
-            
-            <button
-              type="button"
-              onClick={onClose}
-              className="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container lg:hidden cursor-pointer"
-              aria-label="Close navigation menu"
-            >
-              <X className="w-5 h-5" />
-            </button>
+    <aside className="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between overflow-y-auto">
+      <div className="p-space-lg">
+        
+        {/* Brand Header */}
+        <div className="flex items-center gap-space-sm mb-space-lg">
+          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-xs">
+            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
           </div>
+          <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">
+            Sweety
+          </span>
+        </div>
 
           {/* Search Bar */}
           <div className="relative mb-space-lg">
@@ -114,7 +84,7 @@ export const Sidebar = ({
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => handleItemClick(item.id)}
+                      onClick={() => onSelectTab(item.id)}
                       className={`w-full flex items-center justify-between px-space-sm py-2 rounded-full font-label-lg text-label-lg transition-colors cursor-pointer ${
                         isActive
                           ? 'bg-surface-container text-primary font-semibold'
@@ -149,7 +119,7 @@ export const Sidebar = ({
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => handleItemClick(item.id)}
+                      onClick={() => onSelectTab(item.id)}
                       className={`w-full flex items-center justify-between px-space-sm py-2 rounded-full font-label-lg text-label-lg transition-colors cursor-pointer ${
                         isActive
                           ? 'bg-surface-container text-primary font-semibold'
@@ -185,7 +155,7 @@ export const Sidebar = ({
                       key={item.id}
                       id={item.id === 'profile' ? 'tour-nav-profile' : undefined}
                       type="button"
-                      onClick={() => handleItemClick(item.id)}
+                      onClick={() => onSelectTab(item.id)}
                       className={`w-full flex items-center px-space-sm py-2 rounded-full font-label-lg text-label-lg transition-colors gap-space-sm cursor-pointer ${
                         isActive
                           ? 'bg-surface-container text-primary font-semibold'
@@ -237,6 +207,5 @@ export const Sidebar = ({
         </div>
 
       </aside>
-    </>
   );
 };

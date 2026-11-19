@@ -36,7 +36,6 @@ const AppContent = () => {
   });
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [logModalOpen, setLogModalOpen] = useState(false);
-  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   // Transition from landing page directly to demo account
   const handleGetStartedOrDemo = async () => {
@@ -103,11 +102,9 @@ const AppContent = () => {
   return (
     <div className="min-h-screen bg-surface text-on-surface antialiased transition-colors duration-200">
       
-      {/* 1. Responsive Clinical Sidebar matching Stitch Image 3 */}
+      {/* 1. Permanent Desktop Sidebar matching Stitch Image 3 */}
       <Sidebar
         activeTab={activeTab}
-        isOpen={mobileSidebarOpen}
-        onClose={() => setMobileSidebarOpen(false)}
         onSelectTab={(tabId) => {
           if (tabId === 'log') {
             setLogModalOpen(true);
@@ -117,19 +114,18 @@ const AppContent = () => {
         }}
       />
 
-      {/* 2. Main Canvas Shell: Responsive left offset on lg screens */}
-      <div className="min-h-screen flex flex-col pl-0 lg:pl-72 transition-[padding] duration-200">
+      {/* 2. Main Canvas Shell: Fixed Desktop left offset w-72 */}
+      <div className="min-h-screen flex flex-col pl-72">
         {/* Fixed Top Telemetry Header */}
         <TopHeader
           selectedDate={selectedDate}
           onDateChange={setSelectedDate}
           onOpenLogModal={() => setLogModalOpen(true)}
           onLogout={() => setAppMode('landing')}
-          onToggleMobileSidebar={() => setMobileSidebarOpen(prev => !prev)}
         />
 
         {/* Dynamic Page Views */}
-        <main className="flex-1 pt-20 px-3 sm:px-6 lg:px-8 pb-12 w-full bg-surface min-w-0 max-w-full overflow-x-hidden">
+        <main className="flex-1 pt-20 px-8 pb-12 w-full bg-surface">
           {activeTab === 'dashboard' && (
             <Dashboard
               selectedDate={selectedDate}
