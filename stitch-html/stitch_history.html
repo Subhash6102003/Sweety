@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#8f0c24","secondary":"#8a4c57","tertiary-fixed":"#a4f2d8","tertiary":"#106854","primary-container":"#cf414d","on-error-container":"#93000a","surface-bright":"#fff8f7","on-secondary-fixed-variant":"#6e3540","surface-variant":"#f7dcdf","on-tertiary":"#ffffff","surface-tint":"#b12a39","surface-container-highest":"#f7dcdf","background":"#fff8f7","primary":"#ad2737","primary-fixed":"#ffdad9","on-surface":"#26181a","on-tertiary-fixed":"#002018","on-primary":"#ffffff","surface-dim":"#eed4d7","on-secondary-fixed":"#380a16","error":"#ba1a1a","on-primary-fixed":"#40000a","tertiary-fixed-dim":"#88d5bd","surface-container-lowest":"#ffffff","inverse-on-surface":"#ffecee","primary-fixed-dim":"#ffb3b3","secondary-container":"#feaeba","surface-container-low":"#fff0f1","on-tertiary-fixed-variant":"#005140","error-container":"#ffdad6","secondary-fixed-dim":"#ffb2bd","surface-container":"#ffe9eb","inverse-primary":"#ffb3b3","on-error":"#ffffff","on-background":"#26181a","inverse-surface":"#3d2c2f","on-secondary":"#ffffff","on-secondary-container":"#7a3e49","surface":"#fff8f7","tertiary-container":"#33816c","on-tertiary-container":"#f5fff9","on-primary-container":"#fffbff","outline-variant":"#e0bfbe","secondary-fixed":"#ffd9dd","surface-container-high":"#fde2e5","on-surface-variant":"#594141","outline":"#8c7070"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","margin-md":"1.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-xl":"2rem","space-sm":"0.5rem","margin-lg":"2rem","space-2xl":"3rem","space-lg":"1.5rem","margin":"1rem"},fontFamily:{"body-lg":["Inter"],"title-md":["Plus Jakarta Sans"],"label-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"metric-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"-0.005em","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"500"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["2.25rem",{"lineHeight":"2.5rem","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["1.625rem",{"lineHeight":"2.125rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm mb-space-lg"><img alt="Sweety Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB1uMw4PcXjBKrHOKjf5R_93YygFCxx2yLwHbIgYMV6m9ZrHHZPtttQ4xr5nh27nE11qkhypAc3p6wkvzs1rDGspr0PdT-_HfzKBSfuHq7l7l8c4S3kahTwyFlSkwWvgczHDMymH_ujK4iRS2_6MiwXN3CGOwWFBU1hjqz7NtWcImnP1tLJQ3-ZdNc40edgou_vH_uPoUIVDjzfVdk7reW2HZ7RmuwpiiOXDLx95QU"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Sweety</span></div><div class="relative mb-space-lg"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[1.125rem]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg border border-outline-variant/40 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search..." type="text"/></div><div class="space-y-space-md"><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Main Menu</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="log-glucose" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">water_drop</span><span>Log Glucose</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-full transition-colors bg-surface-container text-primary font-semibold" data-path="reading-history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">history</span><span>Reading History</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reports-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="trends-insights" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">trending_up</span><span>Trends &amp; Insights</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="daily-journal" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">menu_book</span><span>Daily Journal</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">3</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Care &amp; Health</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="medication" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">medication</span><span>Medication</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="meals-nutrition" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">restaurant</span><span>Meals &amp; Nutrition</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="activity-fitness" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">fitness_center</span><span>Activity &amp; Fitness</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reminders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">notifications_active</span><span>Reminders</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">2</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Preferences</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="my-health-profile" href="#"><span class="material-symbols-outlined text-[1.25rem]">person</span><span>My Health Profile</span></a><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[1.25rem]">settings</span><span>Settings</span></a></nav></div></div></div><div class="p-space-lg pt-0 space-y-space-md"><div class="space-y-0.5 border-t border-outline-variant/30 pt-space-sm"><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="help-center" href="#"><span class="material-symbols-outlined text-[1.125rem]">help_outline</span><span>Help Center</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="feedback" href="#"><span class="material-symbols-outlined text-[1.125rem]">chat_bubble_outline</span><span>Feedback</span></a></div><div class="p-space-sm bg-surface-container-low rounded-xl border border-outline-variant/50"><div class="flex items-center gap-space-xs mb-1"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Dexcom G7 Synced</span></div><p class="font-body-sm text-body-sm text-outline">Sensor: 10d left • 98% active</p></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline"><span class="material-symbols-outlined text-[1rem]">home</span><span>/</span><span class="text-on-surface font-semibold">Sweety Telemetry</span></div><div class="h-4 w-[1px] bg-outline-variant/50 hidden sm:block"></div><button class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest rounded-full border border-outline-variant/40 font-label-sm text-label-sm text-on-surface shadow-sm hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[1rem] text-primary">calendar_today</span><span>Today, Oct 24, 2024</span><span class="material-symbols-outlined text-[1rem] text-outline">expand_more</span></button></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">mic</span></button><button class="relative w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full ring-2 ring-surface-bright"></span></button></div><div class="h-6 w-[1px] bg-outline-variant/50"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjpVMxjT8LFd8jhpw_TEZhe6xZGSLDg9goABp44qRwVOSVl8ZKosPTuUUZcyNr7KVcYpW9THvvzMpS5eyptzT0TOcLoV04z4hREpmBtD_2IRn-QEqAgevrAR3D7b4F4JDZBrHKgmSll4Pfgbbxi8Xn5zfV3FYsvzZEecyK2BP1yY8QNQi4uB5Fie7-TUgR69qy-6nB-QtIU0cQd9B32_z8TWjp26wum9mm9OLHJg"/><div class="hidden md:block text-left"><p class="font-label-lg text-label-lg font-semibold text-on-surface leading-tight">Elena Vance</p><p class="font-label-sm text-label-sm text-outline leading-tight">Type 1 Diabetes</p></div></div><button class="flex items-center gap-1.5 px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all"><span class="material-symbols-outlined text-[1.125rem]">add</span><span>Log Glucose</span></button></div></header><main class="flex-1 pt-16 w-full px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Hero Header & Global Control Strip -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">Clinical Audit Log</span>
+<span class="text-outline font-label-sm text-label-sm">• G7 Verified Telemetry</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">Reading History</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Complete audit log of capillary, CGM, and sensor-verified glucose events calibrated against target parameters (70–140 mg/dL).
+      </p>
+</div>
+<!-- Quick Action Toolset & Export Dropdown -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container-low rounded-xl">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all" id="viewBtnTable">
+<span class="material-symbols-outlined text-[1rem]">table_rows</span>
+<span>Table View</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" id="viewBtnCal">
+<span class="material-symbols-outlined text-[1rem]">calendar_view_month</span>
+<span>Calendar Grid</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" id="viewBtnTime">
+<span class="material-symbols-outlined text-[1rem]">timeline</span>
+<span>Timeline</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-surface-container-lowest text-secondary rounded-lg font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[1.125rem]">print</span>
+<span>Print Logbook</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[1.125rem]">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Glance Strip: 3 Cards Styled after the Dashboard Inspiration -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+<!-- Total Readings Card -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-outline uppercase font-semibold">Total Filtered</span>
+<span class="material-symbols-outlined text-outline text-[0.95rem]" title="Total clinical telemetry points logged">info</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-on-surface font-bold">124</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[0.9rem]">trending_up</span> +14 vs prev
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4.1 daily capillary &amp; CGM checks</p>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<div class="w-24 h-12 flex items-end">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 100 40">
+<path d="M0 32 Q 15 28, 25 35 T 50 18 T 75 24 T 100 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0 32 Q 15 28, 25 35 T 50 18 T 75 24 T 100 10 L 100 40 L 0 40 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- In-Target Ratio Card -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-outline uppercase font-semibold">Time In Target</span>
+<span class="material-symbols-outlined text-outline text-[0.95rem]">info</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-tertiary font-bold">87.9%</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Optimal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Target range: 70–140 mg/dL</p>
+</div>
+<!-- Circular Progress Visual -->
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 transform -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-high" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4.5"></circle>
+<circle class="text-tertiary" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="15.2" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<span class="material-symbols-outlined text-tertiary absolute text-[1.125rem]">check</span>
+</div>
+</div>
+<!-- Avg Daily Variability Card -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-outline uppercase font-semibold">Glycemic Variability</span>
+<span class="material-symbols-outlined text-outline text-[0.95rem]">info</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-display text-metric-display text-on-surface font-bold">22</span>
+<span class="font-label-md text-label-md text-outline">mg/dL SD</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary font-medium">Within safe clinical delta (&lt;33%)</p>
+</div>
+<!-- Small Bar chart visual mimicking Sweety inspo -->
+<div class="flex items-end gap-1.5 h-12">
+<div class="w-2.5 h-6 bg-surface-container-high rounded-full"></div>
+<div class="w-2.5 h-9 bg-secondary-container rounded-full"></div>
+<div class="w-2.5 h-11 bg-primary rounded-full"></div>
+<div class="w-2.5 h-7 bg-surface-container-high rounded-full"></div>
+<div class="w-2.5 h-8 bg-secondary-container rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Main Telemetry Data Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Filter Control Toolbar -->
+<div class="p-space-lg space-y-space-md bg-surface-bright">
+<!-- Top Row: Date Pill Range, Search, and Slot Tabs -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative w-full xl:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[1.125rem]">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search date, food, bolus dose, note..." type="text"/>
+</div>
+<!-- Filter Segmented Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline font-semibold uppercase mr-1">Meal Slot:</span>
+<button class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold shadow-xs">All Slots</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm transition-colors">Fasting Only</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm transition-colors">Post-Meal Only</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant hover:bg-surface-container-low font-label-sm text-label-sm transition-colors">Bedtime</button>
+</div>
+<!-- Date Range Picker Trigger -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-2 px-3.5 py-1.5 bg-surface-container-lowest rounded-lg font-label-sm text-label-sm text-on-surface shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[1rem] text-primary">calendar_month</span>
+<span class="font-semibold">Sep 25 - Oct 24, 2024</span>
+<span class="text-outline text-label-sm">(30 Days)</span>
+<span class="material-symbols-outlined text-[1rem] text-outline">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<!-- Second Row: Secondary Tag Filters & Quick Status Metrics -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline font-semibold uppercase">Glycemic Status:</span>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface shadow-xs font-label-sm text-label-sm font-semibold">
+<span>All Readings</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-outline text-[0.65rem]">124</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-tertiary shadow-xs font-label-sm text-label-sm font-medium hover:bg-tertiary-fixed/30 transition-colors">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>In Target (70–140)</span>
+<span class="text-outline font-normal">87.9%</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[#b25e02] shadow-xs font-label-sm text-label-sm font-medium hover:bg-[#fff3e0] transition-colors">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+<span>Elevated (&gt;140)</span>
+<span class="text-outline font-normal">12.1%</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-error shadow-xs font-label-sm text-label-sm font-medium hover:bg-error-container transition-colors">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Hypo (&lt;70)</span>
+<span class="text-outline font-normal">0.0%</span>
+</button>
+</div>
+<!-- Bulk Action trigger indicator -->
+<div class="text-outline font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[1rem]">check_circle</span>
+<span>Showing verified records with valid sensor checksum</span>
+</div>
+</div>
+</div>
+<!-- High-Density Clinical Glucose Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md w-10 text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md font-semibold">Timestamp</th>
+<th class="py-3 px-space-md font-semibold">Context / Slot</th>
+<th class="py-3 px-space-md font-semibold">Glucose Level</th>
+<th class="py-3 px-space-md font-semibold">Nutrition &amp; Carbs</th>
+<th class="py-3 px-space-md font-semibold">Insulin Bolus</th>
+<th class="py-3 px-space-md font-semibold">Patient Note</th>
+<th class="py-3 px-space-md font-semibold">Source</th>
+<th class="py-3 px-space-md text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface">
+<!-- Row 1: Elevated Post Lunch -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Today, Oct 24</div>
+<div class="text-outline text-label-sm font-mono">01:30 PM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">
+                2h Post-Lunch
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-[#b25e02] tabular-nums">158</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#fff3e0] text-[#b25e02] font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">arrow_upward</span> Elevated
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Brown rice sushi roll &amp; edamame</div>
+<div class="text-outline text-label-sm">54g carbs • 18g protein</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                4.0u Novolog
+              </span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Desk work right after eating; delayed spike</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors" title="Edit entry">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: In Target - Pre Lunch -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Today, Oct 24</div>
+<div class="text-outline text-label-sm font-mono">11:45 AM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Pre-Lunch
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">104</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">trending_flat</span> Target
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="text-outline italic">Pre-meal check</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-outline">—</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Felt completely stable</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Optimal - Morning Fasting -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Today, Oct 24</div>
+<div class="text-outline text-label-sm font-mono">07:15 AM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+                Waking Fasting
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">94</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">check</span> Optimal
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Black coffee &amp; glass of water</div>
+<div class="text-outline text-label-sm">0g carbs</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                14u Tresiba (Basal)
+              </span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Slept 7.5 hrs; zero nighttime dips</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[1rem] text-primary">bloodtype</span>
+<span>Accu-Chek Guide</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Bedtime Stable -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Yesterday, Oct 23</div>
+<div class="text-outline text-label-sm font-mono">11:10 PM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Bedtime
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">118</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">trending_flat</span> Target
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Chamomile tea + 5 almonds</div>
+<div class="text-outline text-label-sm">2g carbs</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-outline">—</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Safe entry to sleep interval</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: After Dinner -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Yesterday, Oct 23</div>
+<div class="text-outline text-label-sm font-mono">08:45 PM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">
+                2h Post-Dinner
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">128</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">check</span> Target
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Grilled salmon &amp; sweet potato</div>
+<div class="text-outline text-label-sm">42g carbs • 32g protein</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                3.0u Novolog
+              </span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Walked 20 min in the evening</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Afternoon Snack / Coffee -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Yesterday, Oct 23</div>
+<div class="text-outline text-label-sm font-mono">04:20 PM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-medium">
+                Snack
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">112</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">trending_flat</span> Target
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Greek yogurt + blue berries</div>
+<div class="text-outline text-label-sm">18g carbs</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                1.0u Novolog
+              </span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Pre-workout snack</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Post Breakfast High -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Yesterday, Oct 23</div>
+<div class="text-outline text-label-sm font-mono">10:00 AM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium">
+                2h Post-Breakfast
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-[#b25e02] tabular-nums">164</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#fff3e0] text-[#b25e02] font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">arrow_upward</span> Elevated
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Oatmeal with honey &amp; banana</div>
+<div class="text-outline text-label-sm">62g carbs (High glycemic load)</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2 py-1 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                3.5u Novolog
+              </span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Under-bolused for honey sweetener</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Dexcom G7</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Calibration Check Fingerstick -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md text-center">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="font-semibold text-on-surface">Oct 22, 2024</div>
+<div class="text-outline text-label-sm font-mono">03:30 PM</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-medium">
+                Sensor Calib Check
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary tabular-nums">122</span>
+<span class="text-label-sm font-mono text-outline">mg/dL</span>
+<span class="px-2 py-0.5 rounded-full bg-[#e8f5e9] text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[0.8rem]">check</span> Optimal
+                </span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="text-outline italic">Manual fingerstick verification</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="text-outline">—</span>
+</td>
+<td class="py-3.5 px-space-md max-w-xs truncate">
+<span class="text-on-surface-variant">Matches Dexcom G7 (reported 120)</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[1rem] text-primary">bloodtype</span>
+<span>Accu-Chek Guide</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">edit</span>
+</button>
+<button class="p-1 rounded-md hover:bg-surface-container hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">delete_outline</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Pagination & Bulk Operations -->
+<div class="p-space-md sm:px-space-lg bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Selection & Count indicator -->
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-outline">
+<span class="font-medium text-on-surface">Showing 1–8 of 124 records</span>
+<span class="hidden md:inline">•</span>
+<button class="hidden md:inline text-primary hover:underline font-label-sm text-label-sm font-semibold">Select all 124 readings</button>
+</div>
+<!-- Pagination Controls Styled with pill buttons -->
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container hover:text-on-surface transition-colors" disabled="">
+<span class="material-symbols-outlined text-[1.125rem]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-xs">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+          3
+        </button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+          4
+        </button>
+<span class="px-1 text-outline font-label-sm text-label-sm">...</span>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">
+          16
+        </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Context Panels: Quick Distribution & Telemetry Health -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Time-in-Ranges Breakdown -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Range Breakdown</h2>
+<span class="material-symbols-outlined text-outline text-[1.125rem]">pie_chart</span>
+</div>
+<div class="space-y-3">
+<!-- Target Range Bar -->
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> In Target (70–140)
+            </span>
+<span class="font-bold text-on-surface">109 readings (87.9%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 87.9%;"></div>
+</div>
+</div>
+<!-- Elevated Bar -->
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-[#b25e02] font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span> High (141–180)
+            </span>
+<span class="font-bold text-on-surface">15 readings (12.1%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-[#f59e0b] rounded-full" style="width: 12.1%;"></div>
+</div>
+</div>
+<!-- Very High -->
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-error font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Hypo (&lt;70)
+            </span>
+<span class="font-bold text-on-surface">0 readings (0.0%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-outline pt-1">ADA guideline recommends &gt;70% Time-in-Range. You are +17.9% above clinical benchmark.</p>
+</div>
+<!-- Active Sensor Lifespan & Telemetry Reliability -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Sensor Health</h2>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[2rem]">sensors</span>
+</div>
+<div class="space-y-0.5">
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Dexcom G7 #9401</p>
+<p class="font-body-sm text-body-sm text-outline">Inserted: Left Upper Arm</p>
+<p class="font-label-sm text-label-sm text-tertiary font-semibold">10 days remaining of 10.5d</p>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface mb-1">
+<span class="font-semibold">Capture Completeness</span>
+<span class="font-bold text-tertiary">99.4%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 99.4%;"></div>
+</div>
+</div>
+</div>
+<!-- Clinician Share Card -->
+<div class="p-space-lg bg-surface-container rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.25rem]">assignment_ind</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Endocrinologist Share</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dr. Samantha Reynolds, MD has authorized real-time telemetry access. Last remote review was yesterday at 04:30 PM.
+        </p>
+</div>
+<div class="pt-4 flex items-center gap-space-sm">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold text-center hover:bg-primary-container transition-colors shadow-sm">
+          Send AGP PDF Report
+        </button>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors" title="Manage clinician permissions">
+<span class="material-symbols-outlined text-[1.25rem]">settings</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for view toggle buttons
+  const viewBtns = [
+    document.getElementById('viewBtnTable'),
+    document.getElementById('viewBtnCal'),
+    document.getElementById('viewBtnTime')
+  ];
+
+  viewBtns.forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      viewBtns.forEach(b => {
+        b.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors';
+      });
+      btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all font-semibold';
+    });
+  });
+</script></main></div></body></html>

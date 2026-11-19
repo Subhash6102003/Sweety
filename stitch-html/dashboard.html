@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#8f0c24","secondary":"#8a4c57","tertiary-fixed":"#a4f2d8","tertiary":"#106854","primary-container":"#cf414d","on-error-container":"#93000a","surface-bright":"#fff8f7","on-secondary-fixed-variant":"#6e3540","surface-variant":"#f7dcdf","on-tertiary":"#ffffff","surface-tint":"#b12a39","surface-container-highest":"#f7dcdf","background":"#fff8f7","primary":"#ad2737","primary-fixed":"#ffdad9","on-surface":"#26181a","on-tertiary-fixed":"#002018","on-primary":"#ffffff","surface-dim":"#eed4d7","on-secondary-fixed":"#380a16","error":"#ba1a1a","on-primary-fixed":"#40000a","tertiary-fixed-dim":"#88d5bd","surface-container-lowest":"#ffffff","inverse-on-surface":"#ffecee","primary-fixed-dim":"#ffb3b3","secondary-container":"#feaeba","surface-container-low":"#fff0f1","on-tertiary-fixed-variant":"#005140","error-container":"#ffdad6","secondary-fixed-dim":"#ffb2bd","surface-container":"#ffe9eb","inverse-primary":"#ffb3b3","on-error":"#ffffff","on-background":"#26181a","inverse-surface":"#3d2c2f","on-secondary":"#ffffff","on-secondary-container":"#7a3e49","surface":"#fff8f7","tertiary-container":"#33816c","on-tertiary-container":"#f5fff9","on-primary-container":"#fffbff","outline-variant":"#e0bfbe","secondary-fixed":"#ffd9dd","surface-container-high":"#fde2e5","on-surface-variant":"#594141","outline":"#8c7070"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","margin-md":"1.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-xl":"2rem","space-sm":"0.5rem","margin-lg":"2rem","space-2xl":"3rem","space-lg":"1.5rem","margin":"1rem"},fontFamily:{"body-lg":["Inter"],"title-md":["Plus Jakarta Sans"],"label-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"metric-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"-0.005em","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"500"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["2.25rem",{"lineHeight":"2.5rem","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["1.625rem",{"lineHeight":"2.125rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm mb-space-lg"><img alt="Sweety Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB1uMw4PcXjBKrHOKjf5R_93YygFCxx2yLwHbIgYMV6m9ZrHHZPtttQ4xr5nh27nE11qkhypAc3p6wkvzs1rDGspr0PdT-_HfzKBSfuHq7l7l8c4S3kahTwyFlSkwWvgczHDMymH_ujK4iRS2_6MiwXN3CGOwWFBU1hjqz7NtWcImnP1tLJQ3-ZdNc40edgou_vH_uPoUIVDjzfVdk7reW2HZ7RmuwpiiOXDLx95QU"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Sweety</span></div><div class="relative mb-space-lg"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[1.125rem]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg border border-outline-variant/40 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search..." type="text"/></div><div class="space-y-space-md"><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Main Menu</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-full transition-colors bg-surface-container text-primary font-semibold" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="log-glucose" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">water_drop</span><span>Log Glucose</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reading-history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">history</span><span>Reading History</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reports-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="trends-insights" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">trending_up</span><span>Trends &amp; Insights</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="daily-journal" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">menu_book</span><span>Daily Journal</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">3</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Care &amp; Health</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="medication" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">medication</span><span>Medication</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="meals-nutrition" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">restaurant</span><span>Meals &amp; Nutrition</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="activity-fitness" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">fitness_center</span><span>Activity &amp; Fitness</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reminders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">notifications_active</span><span>Reminders</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">2</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Preferences</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="my-health-profile" href="#"><span class="material-symbols-outlined text-[1.25rem]">person</span><span>My Health Profile</span></a><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[1.25rem]">settings</span><span>Settings</span></a></nav></div></div></div><div class="p-space-lg pt-0 space-y-space-md"><div class="space-y-0.5 border-t border-outline-variant/30 pt-space-sm"><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="help-center" href="#"><span class="material-symbols-outlined text-[1.125rem]">help_outline</span><span>Help Center</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="feedback" href="#"><span class="material-symbols-outlined text-[1.125rem]">chat_bubble_outline</span><span>Feedback</span></a></div><div class="p-space-sm bg-surface-container-low rounded-xl border border-outline-variant/50"><div class="flex items-center gap-space-xs mb-1"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Dexcom G7 Synced</span></div><p class="font-body-sm text-body-sm text-outline">Sensor: 10d left • 98% active</p></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline"><span class="material-symbols-outlined text-[1rem]">home</span><span>/</span><span class="text-on-surface font-semibold">Sweety Telemetry</span></div><div class="h-4 w-[1px] bg-outline-variant/50 hidden sm:block"></div><button class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest rounded-full border border-outline-variant/40 font-label-sm text-label-sm text-on-surface shadow-sm hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[1rem] text-primary">calendar_today</span><span>Today, Oct 24, 2024</span><span class="material-symbols-outlined text-[1rem] text-outline">expand_more</span></button></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">mic</span></button><button class="relative w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full ring-2 ring-surface-bright"></span></button></div><div class="h-6 w-[1px] bg-outline-variant/50"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjpVMxjT8LFd8jhpw_TEZhe6xZGSLDg9goABp44qRwVOSVl8ZKosPTuUUZcyNr7KVcYpW9THvvzMpS5eyptzT0TOcLoV04z4hREpmBtD_2IRn-QEqAgevrAR3D7b4F4JDZBrHKgmSll4Pfgbbxi8Xn5zfV3FYsvzZEecyK2BP1yY8QNQi4uB5Fie7-TUgR69qy-6nB-QtIU0cQd9B32_z8TWjp26wum9mm9OLHJg"/><div class="hidden md:block text-left"><p class="font-label-lg text-label-lg font-semibold text-on-surface leading-tight">Elena Vance</p><p class="font-label-sm text-label-sm text-outline leading-tight">Type 1 Diabetes</p></div></div><button class="flex items-center gap-1.5 px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all"><span class="material-symbols-outlined text-[1.125rem]">add</span><span>Log Glucose</span></button></div></header><main class="flex-1 pt-16 w-full px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-header & Global Canvas Toolbar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Dashboard</h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Telemetry Live
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Continuous glucose telemetry &amp; ambulatory metabolic care snapshot</p>
+</div>
+<!-- Actions & Segmented Navigation -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center p-1 bg-surface-container-low rounded-full">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all">Overview</button>
+<button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">Fasting</button>
+<button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">Post-Meal</button>
+<button class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">Sensor AGP</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[1rem] text-primary">add_circle</span>
+<span>Add Widget</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[1rem] text-outline">tune</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[1rem]">file_download</span>
+<span>Export Summary</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI Metric Summary Row (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Today's Avg Glucose -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Today's Avg Glucose</span>
+<span class="material-symbols-outlined text-[1.125rem] text-outline/60 group-hover:text-primary transition-colors">info</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display font-bold text-on-surface tracking-tight">125.5</span>
+<span class="font-label-sm text-label-sm font-semibold text-outline">mg/dL</span>
+</div>
+<!-- Mini Spark Bars -->
+<div class="flex items-end gap-1 h-7">
+<span class="w-1.5 h-3 bg-secondary-fixed rounded-t-sm"></span>
+<span class="w-1.5 h-4 bg-secondary-container rounded-t-sm"></span>
+<span class="w-1.5 h-6 bg-primary-container rounded-t-sm"></span>
+<span class="w-1.5 h-5 bg-primary rounded-t-sm"></span>
+<span class="w-1.5 h-4 bg-primary rounded-t-sm"></span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[0.875rem]">arrow_downward</span>
+            3.2%
+          </span>
+<span class="font-body-sm text-body-sm text-outline">vs yesterday (129.8)</span>
+</div>
+</div>
+<div class="pt-space-sm mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-medium">In Target Range</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+          See Details <span class="material-symbols-outlined text-[0.875rem]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Metric 2: Time in Range (TIR) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Time In Range (TIR)</span>
+<span class="material-symbols-outlined text-[1.125rem] text-outline/60 group-hover:text-primary transition-colors">timeline</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display font-bold text-on-surface tracking-tight">88%</span>
+<span class="font-label-sm text-label-sm text-outline">Target &gt;70%</span>
+</div>
+<!-- Mini Trend Sparkline -->
+<svg class="w-14 h-7 text-primary" fill="none" viewbox="0 0 56 24">
+<path d="M2 18 C 10 14, 16 20, 24 10 C 32 0, 42 16, 54 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<circle class="fill-primary" cx="54" cy="6" r="2.5"></circle>
+</svg>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[0.875rem]">arrow_upward</span>
+            4.0%
+          </span>
+<span class="font-body-sm text-body-sm text-outline">70-140 mg/dL target window</span>
+</div>
+</div>
+<div class="pt-space-sm mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed/40 px-2 py-0.5 rounded-full font-medium">Optimal Stability</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+          See Details <span class="material-symbols-outlined text-[0.875rem]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Metric 3: Scheduled Readings -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Scheduled Readings</span>
+<span class="material-symbols-outlined text-[1.125rem] text-outline/60 group-hover:text-primary transition-colors">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display font-bold text-on-surface tracking-tight">4 <span class="text-headline-md font-normal text-outline">/ 4</span></span>
+</div>
+<!-- Donut ring mini -->
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<span class="absolute material-symbols-outlined text-[0.875rem] text-primary">done</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm font-semibold">100% Logged</span>
+<span class="font-body-sm text-body-sm text-outline">All daily checkpoints synced</span>
+</div>
+</div>
+<div class="pt-space-sm mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-2 py-0.5 rounded-full font-medium">Next: Bedtime (10 PM)</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+          See Details <span class="material-symbols-outlined text-[0.875rem]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Metric 4: Estimated HbA1c -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-all group">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Estimated HbA1c</span>
+<span class="material-symbols-outlined text-[1.125rem] text-outline/60 group-hover:text-primary transition-colors">show_chart</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display font-bold text-on-surface tracking-tight">5.9%</span>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Optimal</span>
+</div>
+<!-- Mini Pill Meter -->
+<div class="flex items-center gap-1">
+<span class="h-6 w-2 bg-tertiary rounded-sm"></span>
+<span class="h-8 w-2 bg-tertiary-container rounded-sm"></span>
+<span class="h-5 w-2 bg-secondary-fixed-dim rounded-sm"></span>
+<span class="h-4 w-2 bg-surface-container-high rounded-sm"></span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[0.875rem]">arrow_downward</span>
+            0.2%
+          </span>
+<span class="font-body-sm text-body-sm text-outline">vs past 90d (6.1%)</span>
+</div>
+</div>
+<div class="pt-space-sm mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-medium">&lt;6.5% Target Met</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+          See Details <span class="material-symbols-outlined text-[0.875rem]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Middle Section: Asymmetric 2-Column Bento Grid (Arch Gauge + Fast Log & Continuous Ambulatory Analytics) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Left Column: Gauge & Fast Glucose Logger (5 Cols) -->
+<div class="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-md">
+<!-- Metabolic Stability Arch Gauge Card (Direct layout homage to Sales Performance) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Metabolic Stability</span>
+<span class="material-symbols-outlined text-[1rem] text-outline">help_outline</span>
+</div>
+<span class="p-1 rounded-md hover:bg-surface-container-high text-outline cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">more_horiz</span>
+</span>
+</div>
+<!-- Arch Graphic SVG -->
+<div class="relative flex flex-col items-center justify-center my-3">
+<svg class="w-56 h-32" viewbox="0 0 200 115">
+<!-- Background Arc -->
+<path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#FDE2E5" stroke-linecap="round" stroke-width="16"></path>
+<!-- Active Rose Progress Arc (~88%) -->
+<path d="M 20 100 A 80 80 0 0 1 168 56" fill="none" stroke="#AD2737" stroke-linecap="round" stroke-width="16"></path>
+<!-- Inner Subtle Track -->
+<path d="M 32 100 A 68 68 0 0 1 168 100" fill="none" stroke="#FFF0F1" stroke-dasharray="2,4" stroke-width="4"></path>
+</svg>
+<!-- Gauge Needle / Score Display -->
+<div class="absolute bottom-2 text-center flex flex-col items-center">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-bold text-on-surface leading-none tracking-tight">88</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary bg-tertiary-fixed/30 px-1.5 py-0.5 rounded-full">+1.2</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium text-outline mt-0.5">of 100 index points</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm text-center mb-space-sm">
+<p class="font-label-lg text-label-lg font-semibold text-primary">Your glucose is stable! ✨</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Glycemic variability CV is under 16%. You stayed within the 70–140 target corridor for 18 continuous hours.
+          </p>
+</div>
+<a class="inline-flex items-center justify-center gap-1 font-label-md text-label-md font-bold text-primary hover:text-primary-container transition-colors py-1" href="#">
+<span>Improve Your Score</span>
+<span class="material-symbols-outlined text-[1rem]">arrow_forward</span>
+</a>
+</div>
+<!-- Quick Glucose Log Fast-Action Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[1.125rem] text-primary">water_drop</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Quick Glucose Log</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 24 • 2:45 PM</span>
+</div>
+<!-- Slot Pills -->
+<div class="grid grid-cols-4 gap-1.5 mb-space-sm">
+<button class="py-1 px-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors text-center">Fasting</button>
+<button class="py-1 px-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors text-center">Pre-Meal</button>
+<button class="py-1 px-1 bg-primary text-on-primary rounded font-label-sm text-label-sm font-semibold transition-colors text-center shadow-xs">Post-Meal</button>
+<button class="py-1 px-1 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors text-center">Bedtime</button>
+</div>
+<!-- Increment / Decrement Counter Value -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-2.5 mb-space-sm">
+<button class="w-8 h-8 rounded-md bg-surface-container-lowest text-on-surface font-bold text-title-md flex items-center justify-center shadow-xs hover:bg-surface-container-high active:scale-95 transition-all" id="decrement-btn">-</button>
+<div class="text-center">
+<div class="flex items-baseline justify-center gap-1">
+<span class="font-metric-display text-metric-display font-bold text-on-surface" id="glucose-value-display">122</span>
+<span class="font-label-sm text-label-sm text-outline font-semibold">mg/dL</span>
+</div>
+<span class="inline-block px-2 py-0.2 rounded-full bg-tertiary-fixed/30 text-tertiary font-label-sm text-label-sm">Post-Lunch Target ≤140</span>
+</div>
+<button class="w-8 h-8 rounded-md bg-surface-container-lowest text-on-surface font-bold text-title-md flex items-center justify-center shadow-xs hover:bg-surface-container-high active:scale-95 transition-all" id="increment-btn">+</button>
+</div>
+<!-- Fast Insulin & Meal Tags + Submit -->
+<div class="flex items-center gap-2 mb-3">
+<div class="flex-1 flex items-center gap-1 px-2.5 py-1.5 bg-surface-container-low rounded-md">
+<span class="material-symbols-outlined text-[1rem] text-outline">medication</span>
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm outline-none placeholder:text-outline" placeholder="Units (e.g. 3.5 u)" type="text"/>
+</div>
+<div class="flex-1 flex items-center gap-1 px-2.5 py-1.5 bg-surface-container-low rounded-md">
+<span class="material-symbols-outlined text-[1rem] text-outline">restaurant</span>
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm outline-none placeholder:text-outline" placeholder="Carbs (e.g. 42 g)" type="text"/>
+</div>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-lg shadow-sm hover:bg-primary-container active:scale-[0.99] transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[1.125rem]">save</span>
+<span>Record Reading</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Glucose Trends & Ambulatory Profile Chart (8 Cols) -->
+<div class="lg:col-span-8 xl:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Ambulatory Glucose Profile (AGP)</h2>
+<span class="p-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-1.5">Last 7 Days</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Continuous telemetry sensor readings calibrated against clinical 70-140 mg/dL target zone</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[0.875rem] text-outline">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+<span>Past Week</span>
+<span class="material-symbols-outlined text-[0.875rem]">expand_more</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[1.125rem]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Custom Telemetry Chart Visualization Area (Styled precisely as referenced) -->
+<div class="relative w-full h-72 bg-surface-container-low/40 rounded-xl p-4 flex flex-col justify-between overflow-hidden">
+<!-- Target Corridor Overlay Indicator (70-140 mg/dL) -->
+<div class="absolute left-10 right-4 top-20 bottom-16 bg-tertiary-fixed/15 rounded pointer-events-none flex items-start justify-end p-1.5">
+<span class="font-label-sm text-label-sm text-tertiary font-medium bg-surface-container-lowest/80 px-2 py-0.5 rounded shadow-xs">
+              Target Corridor (70–140 mg/dL)
+            </span>
+</div>
+<!-- Y-Axis Ticks & Grid Lines -->
+<div class="w-full flex-1 flex flex-col justify-between relative z-0">
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-7 text-right">200</span>
+<div class="flex-1 h-[1px] bg-outline-variant/30 border-dashed"></div>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-7 text-right">160</span>
+<div class="flex-1 h-[1px] bg-outline-variant/30"></div>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-7 text-right">140</span>
+<div class="flex-1 h-[1px] bg-primary/20 border-dashed"></div>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-7 text-right">100</span>
+<div class="flex-1 h-[1px] bg-outline-variant/30"></div>
+</div>
+<div class="flex items-center gap-2 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-7 text-right">70</span>
+<div class="flex-1 h-[1px] bg-tertiary/20 border-dashed"></div>
+</div>
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-7 text-right">40</span>
+<div class="flex-1 h-[1px] bg-outline-variant/20"></div>
+</div>
+</div>
+<!-- Bars + Curves Graphic Layer -->
+<div class="absolute left-12 right-4 bottom-8 top-4 flex items-end justify-between px-3 z-10">
+<!-- Day 1: Mon 18 -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-surface-container-high rounded-t-md hover:bg-secondary-fixed transition-colors" style="height: 120px;"></div>
+<span class="font-label-sm text-label-sm text-outline">Mon 18</span>
+</div>
+<!-- Day 2: Tue 19 -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-surface-container-high rounded-t-md hover:bg-secondary-fixed transition-colors" style="height: 135px;"></div>
+<span class="font-label-sm text-label-sm text-outline">Tue 19</span>
+</div>
+<!-- Day 3: Wed 20 -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-surface-container-high rounded-t-md hover:bg-secondary-fixed transition-colors" style="height: 110px;"></div>
+<span class="font-label-sm text-label-sm text-outline">Wed 20</span>
+</div>
+<!-- Day 4: Thu 21 (ACTIVE SPIKE TOOLTIP - DIRECT HOMAGE TO REFERENCE POPOVER) -->
+<div class="flex flex-col items-center gap-1 relative">
+<!-- Active Tooltip Callout -->
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap z-20 flex flex-col items-start">
+<div class="flex items-center justify-between w-full gap-2">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold">Thu, Oct 21</span>
+<span class="font-label-sm text-label-sm text-error-container">Elevated</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-md text-label-md font-bold">158 mg/dL</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface/70">• Post-Lunch Spike</span>
+</div>
+<div class="w-2 h-2 bg-inverse-surface rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2"></div>
+</div>
+<!-- Bar in Accent Primary Red -->
+<div class="w-8 bg-primary rounded-t-md shadow-sm transition-transform scale-105" style="height: 168px;"></div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Thu 21</span>
+</div>
+<!-- Day 5: Fri 22 -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-surface-container-high rounded-t-md hover:bg-secondary-fixed transition-colors" style="height: 125px;"></div>
+<span class="font-label-sm text-label-sm text-outline">Fri 22</span>
+</div>
+<!-- Day 6: Sat 23 -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-surface-container-high rounded-t-md hover:bg-secondary-fixed transition-colors" style="height: 118px;"></div>
+<span class="font-label-sm text-label-sm text-outline">Sat 23</span>
+</div>
+<!-- Day 7: Sun 24 (Today) -->
+<div class="flex flex-col items-center gap-1 group relative">
+<div class="w-8 bg-secondary-container rounded-t-md hover:bg-primary-container transition-colors" style="height: 122px;"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Today</span>
+</div>
+</div>
+<!-- Overlay SVG Continuous Glucose Smoothing Wave -->
+<svg class="absolute left-14 right-8 top-12 bottom-12 w-[calc(100%-4.5rem)] h-[180px] pointer-events-none z-15" fill="none" viewbox="0 0 500 180">
+<path d="M 10 90 Q 75 75, 120 85 T 210 100 T 290 28 T 370 85 T 450 92" fill="none" stroke="#AD2737" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Peak Point Dot -->
+<circle cx="290" cy="28" fill="#AD2737" r="5" stroke="#FFFFFF" stroke-width="2"></circle>
+<!-- Fasting Nadir Dot -->
+<circle cx="210" cy="100" fill="#106854" r="4" stroke="#FFFFFF" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+<!-- Footer Clinical Telemetry Strip -->
+<div class="pt-space-md mt-space-sm grid grid-cols-2 sm:grid-cols-4 gap-space-sm text-left">
+<div class="p-2 bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-outline">7-Day Mean Glucose</p>
+<p class="font-title-md text-title-md font-bold text-on-surface">126.8 <span class="text-label-sm font-normal text-outline">mg/dL</span></p>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-outline">Highest Peak (Thu)</p>
+<p class="font-title-md text-title-md font-bold text-error">158 <span class="text-label-sm font-normal text-outline">mg/dL</span></p>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-outline">Lowest Fasting (Wed)</p>
+<p class="font-title-md text-title-md font-bold text-tertiary">94 <span class="text-label-sm font-normal text-outline">mg/dL</span></p>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-outline">Ambulatory CV</p>
+<p class="font-title-md text-title-md font-bold text-primary">15.1% <span class="text-label-sm font-normal text-tertiary font-semibold">(Low Var)</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Weekly Heatmap Schedule Matrix & Segmented Time-In-Range Donut (2 Columns) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: Schedule Compliance by Meal Slot Matrix (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">Slot Compliance Matrix</span>
+<span class="material-symbols-outlined text-[1rem] text-outline">calendar_view_week</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Weekly verification by clinical meal &amp; fasting checkpoints</p>
+</div>
+<!-- Heatmap Legend -->
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">In-Range:</span>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-sm bg-surface-container-high" title="Missed / Pending"></span>
+<span class="w-3 h-3 rounded-sm bg-secondary-fixed" title="Acceptable"></span>
+<span class="w-3 h-3 rounded-sm bg-primary-container" title="Target Matched"></span>
+<span class="w-3 h-3 rounded-sm bg-primary" title="Optimal Exact"></span>
+</div>
+</div>
+</div>
+<!-- Heatmap Grid (Direct style counterpart to Visit by Time matrix) -->
+<div class="space-y-2 mt-space-md">
+<!-- Mon-Sun Header Labels -->
+<div class="grid grid-cols-8 gap-2 text-center font-label-sm text-label-sm text-outline font-semibold">
+<div class="text-left pl-1">Slot</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+<div>Sun</div>
+</div>
+<!-- Row 1: Fasting (Morning 6-8 AM) -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Fasting</span>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Mon: 98 mg/dL">98</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Tue: 104 mg/dL">104</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Wed: 94 mg/dL">94</div>
+<div class="h-8 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Thu: 112 mg/dL">112</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Fri: 99 mg/dL">99</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Sat: 102 mg/dL">102</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Sun: 97 mg/dL">97</div>
+</div>
+<!-- Row 2: Post-Breakfast (9-11 AM) -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Breakfast</span>
+<div class="h-8 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-semibold" title="Mon: 128 mg/dL">128</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Tue: 119 mg/dL">119</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Wed: 122 mg/dL">122</div>
+<div class="h-8 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-semibold" title="Thu: 134 mg/dL">134</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Fri: 118 mg/dL">118</div>
+<div class="h-8 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center justify-center" title="Sat: 139 mg/dL">139</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Sun: 121 mg/dL">121</div>
+</div>
+<!-- Row 3: Post-Lunch (1-3 PM) -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Lunch</span>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Mon: 131 mg/dL">131</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Tue: 124 mg/dL">124</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Wed: 129 mg/dL">129</div>
+<div class="h-8 rounded bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center justify-center font-bold shadow-xs" title="Thu: 158 mg/dL (Spike)">158</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Fri: 127 mg/dL">127</div>
+<div class="h-8 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-semibold" title="Sat: 135 mg/dL">135</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Sun: 122 mg/dL">122</div>
+</div>
+<!-- Row 4: Bedtime Check (9-11 PM) -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium truncate">Bedtime</span>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Mon: 110 mg/dL">110</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Tue: 114 mg/dL">114</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Wed: 108 mg/dL">108</div>
+<div class="h-8 rounded bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center justify-center font-semibold" title="Thu: 126 mg/dL">126</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Fri: 112 mg/dL">112</div>
+<div class="h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold" title="Sat: 116 mg/dL">116</div>
+<div class="h-8 rounded bg-surface-container-high text-outline font-label-sm text-label-sm flex items-center justify-center font-medium" title="Pending Bedtime Scan">Pending</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm mt-3 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>27 of 28 expected readings recorded this week</span>
+<span class="text-tertiary font-semibold">96.4% Compliance Rate</span>
+</div>
+</div>
+<!-- Right: Time-In-Range Segmented Donut & Breakdown (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-bold">TIR Distribution</span>
+<span class="material-symbols-outlined text-[1rem] text-outline">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Cumulative 30-day glycemic distribution</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">96 Logs</span>
+</div>
+<!-- Donut & Breakdown Layout (Faithfully mirroring the reference Visit / Mobile-Web split) -->
+<div class="flex items-center justify-between gap-space-md my-space-md">
+<!-- Text Metrics Left -->
+<div class="space-y-3 flex-1">
+<div>
+<p class="font-label-sm text-label-sm text-outline">Target Zone (70-140)</p>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display font-bold text-on-surface">84</span>
+<span class="font-body-sm text-body-sm text-outline font-medium">logs (88%)</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[0.875rem]">trending_up</span>
+<span>+6% vs last period</span>
+</div>
+</div>
+<div class="space-y-2 pt-2 border-t border-outline-variant/30">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface font-medium">Target In-Range</span>
+</div>
+<span class="font-bold text-on-surface">88% (84)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface font-medium">Elevated (&gt;140)</span>
+</div>
+<span class="font-bold text-on-surface">12% (12)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="text-on-surface font-medium">Low (&lt;70 mg/dL)</span>
+</div>
+<span class="font-bold text-tertiary">0% (0)</span>
+</div>
+</div>
+</div>
+<!-- Segmented Circle SVG (Matching Reference Pie Visual) -->
+<div class="relative w-36 h-36 flex-shrink-0 flex items-center justify-center">
+<svg class="w-36 h-36 -rotate-90" viewbox="0 0 100 100">
+<!-- Elevated Slice (12%) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#FEAEBA" stroke-dasharray="251.2" stroke-dashoffset="0" stroke-width="20"></circle>
+<!-- Target In-Range Slice (88%) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#AD2737" stroke-dasharray="221 251.2" stroke-dashoffset="30.1" stroke-width="20"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">88%</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">TIR Score</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer Link -->
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Clinical Target: ≥70% TIR</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+<span>Full AGP Report</span>
+<span class="material-symbols-outlined text-[0.875rem]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive micro-interaction for the Quick Log counter
+  const decBtn = document.getElementById('decrement-btn');
+  const incBtn = document.getElementById('increment-btn');
+  const valDisplay = document.getElementById('glucose-value-display');
+
+  if (decBtn && incBtn && valDisplay) {
+    decBtn.addEventListener('click', () => {
+      let cur = parseInt(valDisplay.innerText, 10);
+      if (cur > 40) valDisplay.innerText = cur - 1;
+    });
+
+    incBtn.addEventListener('click', () => {
+      let cur = parseInt(valDisplay.innerText, 10);
+      if (cur < 400) valDisplay.innerText = cur + 1;
+    });
+  }
+</script></main></div></body></html>

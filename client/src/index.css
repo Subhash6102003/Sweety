@@ -1,0 +1,458 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  SWEETY CLINICAL DESIGN SYSTEM THEMES (SYNCHRONIZED WITH GOOGLE STITCH MCP 306623237418365832)
+  - Warm Clinical Health (Rose Red - Primary Default, key: 'rose')
+  - Clinical Sage Health (Sage Green - Metabolic, key: 'green')
+  - Clinical Cerulean (Cerulean Blue - Cardio, key: 'blue')
+  - Clinical Lilac Health (Royal Purple / Soft Violet - Endocrine, key: 'purple')
+*/
+
+:root,
+[data-theme="rose"] {
+  --primary: #ad2737;
+  --primary-container: #cf414d;
+  --primary-hover: #8f0c24;
+  --primary-fixed: #ffdad9;
+  --primary-fixed-dim: #ffb3b3;
+  --on-primary: #ffffff;
+  --on-primary-fixed: #40000a;
+  --on-primary-fixed-variant: #8f0c24;
+  --on-primary-container: #fffbff;
+  --secondary: #8a4c57;
+  --secondary-container: #feaeba;
+  --secondary-fixed: #ffd9dd;
+  --secondary-fixed-dim: #ffb2bd;
+  --on-secondary: #ffffff;
+  --on-secondary-fixed: #3b0814;
+  --on-secondary-fixed-variant: #6e3540;
+  --on-secondary-container: #7a3e49;
+  --tertiary: #106854;
+  --tertiary-container: #33816c;
+  --tertiary-fixed: #a4f2d8;
+  --tertiary-fixed-dim: #88d5bd;
+  --on-tertiary: #ffffff;
+  --on-tertiary-fixed: #002018;
+  --on-tertiary-fixed-variant: #005140;
+  --on-tertiary-container: #f5fff9;
+  --in-target: #106854;
+  --background: #fff8f7;
+  --on-background: #26181a;
+  --surface: #fff8f7;
+  --surface-bright: #fff8f7;
+  --surface-dim: #eed4d7;
+  --surface-variant: #f7dcdf;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #fff0f1;
+  --surface-container: #ffe9eb;
+  --surface-container-high: #fde2e5;
+  --surface-container-highest: #f7dcdf;
+  --inverse-surface: #3d2c2f;
+  --inverse-on-surface: #ffecee;
+  --inverse-primary: #ffb3b3;
+  --on-surface: #26181a;
+  --on-surface-variant: #594141;
+  --outline: #8c7070;
+  --outline-variant: #e0bfbe;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  --chart-line: #ad2737;
+  --chart-fill: rgba(173, 39, 55, 0.15);
+  --theme-brand-name: "Warm Clinical Health";
+}
+
+[data-theme="green"] {
+  --primary: #2d8a70;
+  --primary-container: #248369;
+  --primary-hover: #1f6853;
+  --primary-fixed: #9bf4d5;
+  --primary-fixed-dim: #7dd8b9;
+  --on-primary: #ffffff;
+  --on-primary-fixed: #002117;
+  --on-primary-fixed-variant: #0e513d;
+  --on-primary-container: #ffffff;
+  --secondary: #4b645a;
+  --secondary-container: #cde9dc;
+  --secondary-fixed: #cde9dc;
+  --secondary-fixed-dim: #b1cdbf;
+  --on-secondary: #ffffff;
+  --on-secondary-fixed: #072018;
+  --on-secondary-fixed-variant: #344c42;
+  --on-secondary-container: #334b42;
+  --tertiary: #3c6472;
+  --tertiary-container: #bfe9f9;
+  --tertiary-fixed: #89f8d0;
+  --tertiary-fixed-dim: #70dcb5;
+  --on-tertiary: #ffffff;
+  --on-tertiary-fixed: #002117;
+  --on-tertiary-fixed-variant: #224c3d;
+  --on-tertiary-container: #00201a;
+  --in-target: #137a53;
+  --background: #e9fef3;
+  --on-background: #161d19;
+  --surface: #e9fef3;
+  --surface-bright: #f4fbf6;
+  --surface-dim: #cadfd4;
+  --surface-variant: #d2e7dc;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #eef5f0;
+  --surface-container: #e8efe9;
+  --surface-container-high: #e2eae4;
+  --surface-container-highest: #d2e7dc;
+  --inverse-surface: #2b322e;
+  --inverse-on-surface: #ecf2ed;
+  --inverse-primary: #7dd8b9;
+  --on-surface: #161d19;
+  --on-surface-variant: #404944;
+  --outline: #707973;
+  --outline-variant: #bfc9c2;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  --chart-line: #2d8a70;
+  --chart-fill: rgba(45, 138, 112, 0.15);
+  --theme-brand-name: "Clinical Sage Health";
+}
+
+[data-theme="blue"] {
+  --primary: #0284c7;
+  --primary-container: #007bb9;
+  --primary-hover: #0369a1;
+  --primary-fixed: #cce5ff;
+  --primary-fixed-dim: #90cdff;
+  --on-primary: #ffffff;
+  --on-primary-fixed: #001e30;
+  --on-primary-fixed-variant: #004c75;
+  --on-primary-container: #ffffff;
+  --secondary: #51606f;
+  --secondary-container: #d5e4f7;
+  --secondary-fixed: #d5e4f7;
+  --secondary-fixed-dim: #b9c8db;
+  --on-secondary: #ffffff;
+  --on-secondary-fixed: #0d1d29;
+  --on-secondary-fixed-variant: #3a4857;
+  --on-secondary-container: #394856;
+  --tertiary: #68546f;
+  --tertiary-container: #f0dbf7;
+  --tertiary-fixed: #f0dbf7;
+  --tertiary-fixed-dim: #d3bfe0;
+  --on-tertiary: #ffffff;
+  --on-tertiary-fixed: #001f28;
+  --on-tertiary-fixed-variant: #4f3d56;
+  --on-tertiary-container: #24112e;
+  --in-target: #0284c7;
+  --background: #faf8ff;
+  --on-background: #181c20;
+  --surface: #faf8ff;
+  --surface-bright: #f8fafc;
+  --surface-dim: #d2d9f4;
+  --surface-variant: #dae2fd;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f0f3fa;
+  --surface-container: #eaedf4;
+  --surface-container-high: #e4e8ee;
+  --surface-container-highest: #dae2fd;
+  --inverse-surface: #2d3135;
+  --inverse-on-surface: #eff1f6;
+  --inverse-primary: #90cdff;
+  --on-surface: #181c20;
+  --on-surface-variant: #41474d;
+  --outline: #72777e;
+  --outline-variant: #c1c7cf;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  --chart-line: #0284c7;
+  --chart-fill: rgba(2, 132, 199, 0.15);
+  --theme-brand-name: "Clinical Cerulean";
+}
+
+[data-theme="purple"] {
+  --primary: #7c3aed;
+  --primary-container: #7c3aed;
+  --primary-hover: #6d28d9;
+  --primary-fixed: #eaddff;
+  --primary-fixed-dim: #d0bcff;
+  --on-primary: #ffffff;
+  --on-primary-fixed: #22005d;
+  --on-primary-fixed-variant: #601bb9;
+  --on-primary-container: #ffffff;
+  --secondary: #645a70;
+  --secondary-container: #ebddef;
+  --secondary-fixed: #ebddef;
+  --secondary-fixed-dim: #cfc1d3;
+  --on-secondary: #ffffff;
+  --on-secondary-fixed: #20182a;
+  --on-secondary-fixed-variant: #4c4256;
+  --on-secondary-container: #4c4357;
+  --tertiary: #7a525f;
+  --tertiary-container: #ffd9e3;
+  --tertiary-fixed: #ffd9e3;
+  --tertiary-fixed-dim: #f2b7c6;
+  --on-tertiary: #ffffff;
+  --on-tertiary-fixed: #260058;
+  --on-tertiary-fixed-variant: #5f3b47;
+  --on-tertiary-container: #30111d;
+  --in-target: #7c3aed;
+  --background: #f9f9ff;
+  --on-background: #1d1a1f;
+  --surface: #f9f9ff;
+  --surface-bright: #fdf7ff;
+  --surface-dim: #d3daea;
+  --surface-variant: #dce2f3;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f6f1f8;
+  --surface-container: #f0ebf2;
+  --surface-container-high: #eae5ec;
+  --surface-container-highest: #dce2f3;
+  --inverse-surface: #322f35;
+  --inverse-on-surface: #f5eff7;
+  --inverse-primary: #d0bcff;
+  --on-surface: #1d1a1f;
+  --on-surface-variant: #4a454d;
+  --outline: #7b757e;
+  --outline-variant: #ccc3cd;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error: #ffffff;
+  --on-error-container: #93000a;
+  --chart-line: #7c3aed;
+  --chart-fill: rgba(124, 58, 237, 0.15);
+  --theme-brand-name: "Clinical Lilac Health";
+}
+
+/* Material Symbols Outlined font-variation */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures for telemetry & numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: "tnum" 1;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Snappy transitions adhering to OmniBrain physics: 150-220ms native curve */
+.transition-snappy {
+  transition: all 180ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Hide scrollbars cleanly */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================================
+   STITCH DESIGN SYSTEM TOKENS & UTILITIES FALLBACK ASSURANCE
+   ========================================================================= */
+
+/* Typography Scale */
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-headline-lg { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-headline-md { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-headline-sm { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-title-md { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-label-md { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-label-sm { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-data-metric { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+.font-body-lg { font-family: 'Inter', sans-serif !important; }
+.font-body-md { font-family: 'Inter', sans-serif !important; }
+.font-body-sm { font-family: 'Inter', sans-serif !important; }
+
+.text-display { font-size: 40px !important; line-height: 48px !important; letter-spacing: -0.02em !important; }
+.text-headline-lg { font-size: 32px !important; line-height: 40px !important; letter-spacing: -0.02em !important; }
+.text-headline-md { font-size: 24px !important; line-height: 32px !important; letter-spacing: -0.015em !important; }
+.text-headline-sm { font-size: 20px !important; line-height: 28px !important; letter-spacing: -0.01em !important; }
+.text-title-md { font-size: 16px !important; line-height: 24px !important; letter-spacing: -0.005em !important; }
+.text-body-lg { font-size: 16px !important; line-height: 24px !important; }
+.text-body-md { font-size: 14px !important; line-height: 20px !important; }
+.text-body-sm { font-size: 12px !important; line-height: 16px !important; }
+.text-label-md { font-size: 13px !important; line-height: 18px !important; letter-spacing: 0.01em !important; }
+.text-label-sm { font-size: 11px !important; line-height: 14px !important; letter-spacing: 0.04em !important; }
+.text-data-metric { font-size: 28px !important; line-height: 32px !important; letter-spacing: -0.02em !important; }
+
+/* Spacing Scale */
+.gap-space-xs { gap: 0.25rem !important; }
+.gap-space-sm { gap: 0.5rem !important; }
+.gap-space-md { gap: 1rem !important; }
+.gap-space-lg { gap: 1.5rem !important; }
+.gap-space-xl { gap: 2rem !important; }
+.gap-space-2xl { gap: 3rem !important; }
+.gap-gutter { gap: 1.25rem !important; }
+.gap-gutter-sm { gap: 0.75rem !important; }
+.gap-gutter-lg { gap: 1.5rem !important; }
+
+.p-space-xs { padding: 0.25rem !important; }
+.p-space-sm { padding: 0.5rem !important; }
+.p-space-md { padding: 1rem !important; }
+.p-space-lg { padding: 1.5rem !important; }
+.p-space-xl { padding: 2rem !important; }
+.p-gutter { padding: 1.25rem !important; }
+
+.px-space-xs { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+.px-space-sm { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+.px-space-md { padding-left: 1rem !important; padding-right: 1rem !important; }
+.px-space-lg { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.px-space-xl { padding-left: 2rem !important; padding-right: 2rem !important; }
+.px-margin-desktop { padding-left: 2.5rem !important; padding-right: 2.5rem !important; }
+.px-margin-mobile { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+.py-space-xs { padding-top: 0.25rem !important; padding-bottom: 0.25rem !important; }
+.py-space-sm { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.py-space-md { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+.py-space-lg { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py-space-xl { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
+.mb-space-xs { margin-bottom: 0.25rem !important; }
+.mb-space-sm { margin-bottom: 0.5rem !important; }
+.mb-space-md { margin-bottom: 1rem !important; }
+.mb-space-lg { margin-bottom: 1.5rem !important; }
+.mb-space-xl { margin-bottom: 2rem !important; }
+
+.mt-space-xs { margin-top: 0.25rem !important; }
+.mt-space-sm { margin-top: 0.5rem !important; }
+.mt-space-md { margin-top: 1rem !important; }
+.mt-space-lg { margin-top: 1.5rem !important; }
+.mt-space-xl { margin-top: 2rem !important; }
+
+.pt-space-xs { padding-top: 0.25rem !important; }
+.pt-space-sm { padding-top: 0.5rem !important; }
+.pt-space-md { padding-top: 1rem !important; }
+.pt-space-lg { padding-top: 1.5rem !important; }
+.pt-space-xl { padding-top: 2rem !important; }
+
+.pb-space-xs { padding-bottom: 0.25rem !important; }
+.pb-space-sm { padding-bottom: 0.5rem !important; }
+.pb-space-md { padding-bottom: 1rem !important; }
+.pb-space-lg { padding-bottom: 1.5rem !important; }
+.pb-space-xl { padding-bottom: 2rem !important; }
+
+/* =========================================================================
+   OFFICIAL CLINICAL AGP REPORT PRINT STYLESHEET
+   Suppresses entire web chrome (sidebar, nav, buttons) and renders ONLY
+   the clean, high-contrast, certified Ambulatory Glucose Profile report.
+   ========================================================================= */
+@media print {
+  /* Hide non-printable navigation, sidebars, buttons, and app shell controls */
+  aside,
+  header,
+  nav,
+  button,
+  .no-print,
+  input,
+  select,
+  footer {
+    display: none !important;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Unclasp the modal overlay from fixed positioning and viewport clipping */
+  .fixed {
+    position: static !important;
+    height: auto !important;
+    width: 100% !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .relative {
+    position: static !important;
+  }
+
+  .max-w-4xl,
+  .max-w-2xl,
+  .max-w-md {
+    max-width: 100% !important;
+  }
+
+  .max-h-\[92vh\],
+  .max-h-\[90vh\],
+  .overflow-hidden,
+  .overflow-y-auto {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .shadow-2xl,
+  .shadow-xl,
+  .shadow-md,
+  .shadow-sm,
+  .shadow-xs {
+    box-shadow: none !important;
+  }
+
+  .rounded-3xl,
+  .rounded-2xl {
+    border-radius: 0 !important;
+  }
+
+  .border {
+    border-color: #cbd5e1 !important;
+  }
+
+  #official-clinical-agp-report {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    overflow: visible !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: letter portrait;
+    margin: 10mm 12mm;
+  }
+}
+
+/* Tour Highlight Box */
+.tour-highlighted-element {
+  position: relative !important;
+  z-index: 52 !important;
+  outline: 3px solid var(--primary, #ad2737) !important;
+  outline-offset: 4px !important;
+  box-shadow: 0 0 25px rgba(173, 39, 55, 0.45) !important;
+  border-radius: 16px !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+

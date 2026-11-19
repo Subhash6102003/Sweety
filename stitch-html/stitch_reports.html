@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#8f0c24","secondary":"#8a4c57","tertiary-fixed":"#a4f2d8","tertiary":"#106854","primary-container":"#cf414d","on-error-container":"#93000a","surface-bright":"#fff8f7","on-secondary-fixed-variant":"#6e3540","surface-variant":"#f7dcdf","on-tertiary":"#ffffff","surface-tint":"#b12a39","surface-container-highest":"#f7dcdf","background":"#fff8f7","primary":"#ad2737","primary-fixed":"#ffdad9","on-surface":"#26181a","on-tertiary-fixed":"#002018","on-primary":"#ffffff","surface-dim":"#eed4d7","on-secondary-fixed":"#380a16","error":"#ba1a1a","on-primary-fixed":"#40000a","tertiary-fixed-dim":"#88d5bd","surface-container-lowest":"#ffffff","inverse-on-surface":"#ffecee","primary-fixed-dim":"#ffb3b3","secondary-container":"#feaeba","surface-container-low":"#fff0f1","on-tertiary-fixed-variant":"#005140","error-container":"#ffdad6","secondary-fixed-dim":"#ffb2bd","surface-container":"#ffe9eb","inverse-primary":"#ffb3b3","on-error":"#ffffff","on-background":"#26181a","inverse-surface":"#3d2c2f","on-secondary":"#ffffff","on-secondary-container":"#7a3e49","surface":"#fff8f7","tertiary-container":"#33816c","on-tertiary-container":"#f5fff9","on-primary-container":"#fffbff","outline-variant":"#e0bfbe","secondary-fixed":"#ffd9dd","surface-container-high":"#fde2e5","on-surface-variant":"#594141","outline":"#8c7070"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","margin-md":"1.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","gutter":"1.25rem","space-xl":"2rem","space-sm":"0.5rem","margin-lg":"2rem","space-2xl":"3rem","space-lg":"1.5rem","margin":"1rem"},fontFamily:{"body-lg":["Inter"],"title-md":["Plus Jakarta Sans"],"label-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"metric-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"-0.005em","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"500"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["2.25rem",{"lineHeight":"2.5rem","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg-mobile":["1.625rem",{"lineHeight":"2.125rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.005em","fontWeight":"400"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm mb-space-lg"><img alt="Sweety Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB1uMw4PcXjBKrHOKjf5R_93YygFCxx2yLwHbIgYMV6m9ZrHHZPtttQ4xr5nh27nE11qkhypAc3p6wkvzs1rDGspr0PdT-_HfzKBSfuHq7l7l8c4S3kahTwyFlSkwWvgczHDMymH_ujK4iRS2_6MiwXN3CGOwWFBU1hjqz7NtWcImnP1tLJQ3-ZdNc40edgou_vH_uPoUIVDjzfVdk7reW2HZ7RmuwpiiOXDLx95QU"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Sweety</span></div><div class="relative mb-space-lg"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[1.125rem]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low rounded-lg border border-outline-variant/40 text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search..." type="text"/></div><div class="space-y-space-md"><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Main Menu</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="log-glucose" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">water_drop</span><span>Log Glucose</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reading-history" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">history</span><span>Reading History</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reports-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="trends-insights" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">trending_up</span><span>Trends &amp; Insights</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="daily-journal" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">menu_book</span><span>Daily Journal</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">3</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Care &amp; Health</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="medication" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">medication</span><span>Medication</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="meals-nutrition" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">restaurant</span><span>Meals &amp; Nutrition</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="activity-fitness" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">fitness_center</span><span>Activity &amp; Fitness</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="reminders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[1.25rem]">notifications_active</span><span>Reminders</span></div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">2</span></a></nav></div><div class="space-y-1"><p class="px-space-sm font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline mb-1">Preferences</p><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="my-health-profile" href="#"><span class="material-symbols-outlined text-[1.25rem]">person</span><span>My Health Profile</span></a><a class="flex items-center px-space-sm py-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg gap-space-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[1.25rem]">settings</span><span>Settings</span></a></nav></div></div></div><div class="p-space-lg pt-0 space-y-space-md"><div class="space-y-0.5 border-t border-outline-variant/30 pt-space-sm"><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="help-center" href="#"><span class="material-symbols-outlined text-[1.125rem]">help_outline</span><span>Help Center</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="feedback" href="#"><span class="material-symbols-outlined text-[1.125rem]">chat_bubble_outline</span><span>Feedback</span></a></div><div class="p-space-sm bg-surface-container-low rounded-xl border border-outline-variant/50"><div class="flex items-center gap-space-xs mb-1"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Dexcom G7 Synced</span></div><p class="font-body-sm text-body-sm text-outline">Sensor: 10d left • 98% active</p></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline"><span class="material-symbols-outlined text-[1rem]">home</span><span>/</span><span class="text-on-surface font-semibold">Sweety Telemetry</span></div><div class="h-4 w-[1px] bg-outline-variant/50 hidden sm:block"></div><button class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest rounded-full border border-outline-variant/40 font-label-sm text-label-sm text-on-surface shadow-sm hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[1rem] text-primary">calendar_today</span><span>Today, Oct 24, 2024</span><span class="material-symbols-outlined text-[1rem] text-outline">expand_more</span></button></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">mic</span></button><button class="relative w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[1.25rem]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full ring-2 ring-surface-bright"></span></button></div><div class="h-6 w-[1px] bg-outline-variant/50"></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjpVMxjT8LFd8jhpw_TEZhe6xZGSLDg9goABp44qRwVOSVl8ZKosPTuUUZcyNr7KVcYpW9THvvzMpS5eyptzT0TOcLoV04z4hREpmBtD_2IRn-QEqAgevrAR3D7b4F4JDZBrHKgmSll4Pfgbbxi8Xn5zfV3FYsvzZEecyK2BP1yY8QNQi4uB5Fie7-TUgR69qy-6nB-QtIU0cQd9B32_z8TWjp26wum9mm9OLHJg"/><div class="hidden md:block text-left"><p class="font-label-lg text-label-lg font-semibold text-on-surface leading-tight">Elena Vance</p><p class="font-label-sm text-label-sm text-outline leading-tight">Type 1 Diabetes</p></div></div><button class="flex items-center gap-1.5 px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all"><span class="material-symbols-outlined text-[1.125rem]">add</span><span>Log Glucose</span></button></div></header><main class="flex-1 pt-16 w-full px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full space-y-space-lg pb-space-2xl">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+          AGP Standard v3.2
+        </span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="text-outline font-label-sm text-label-sm">Endocrine Society Aligned</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Reports &amp; Clinical Analytics</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Comprehensive glycemic report package compliant with Ambulatory Glucose Profile (AGP) specifications for clinical provider audit and personal therapy refinement.
+      </p>
+</div>
+<!-- Actions & Quick Export -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-[1.125rem] text-primary">sim_card_download</span>
+<span>Export Raw CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[1.25rem]">picture_as_pdf</span>
+<span>Download Official PDF Report</span>
+</button>
+</div>
+</div>
+<!-- Filter & Provider Sharing Header Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Segmented Navigation Pills -->
+<div class="flex items-center gap-1 overflow-x-auto p-1 bg-surface-container-low rounded-full">
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Daily Report</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Weekly Summary</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md bg-secondary-fixed text-primary font-bold shadow-xs">Monthly AGP</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Custom Date Range</button>
+</div>
+<!-- Date selector & Provider pill -->
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[1rem] text-primary">date_range</span>
+<span class="font-semibold">Oct 01, 2024 – Oct 24, 2024</span>
+<span class="text-outline text-label-sm">(24 days)</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-tertiary-fixed/30 rounded-full font-label-sm text-label-sm text-on-tertiary-fixed-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>Sharing active: <strong class="font-semibold text-tertiary">Dr. Robert Miller</strong> (Endocrinology)</span>
+<button class="text-tertiary hover:opacity-75 transition-opacity ml-1">
+<span class="material-symbols-outlined text-[1rem]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Benchmark Key Metrics (4 Sleek Comparative Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Mean Glucose -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1">Mean CGM Glucose</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">122.4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">mg/dL</span>
+</div>
+</div>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[1.25rem]">water_drop</span>
+</span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Clinical Target</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[1rem]">check_circle</span>
+<span>&lt; 130 mg/dL (Met)</span>
+</div>
+</div>
+</div>
+<!-- Card 2: GMI / Est. HbA1c -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1">Glucose Mgmt. Indicator</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">5.9</span>
+<span class="font-metric-display text-headline-sm text-on-surface-variant">%</span>
+</div>
+</div>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-fixed text-primary">
+<span class="material-symbols-outlined text-[1.25rem]">assignment_turned_in</span>
+</span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Est. HbA1c Status</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+          Optimal (&lt;7.0%)
+        </span>
+</div>
+</div>
+<!-- Card 3: Glycemic Variability (%CV) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1">Glycemic Variability</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">15.1</span>
+<span class="font-metric-display text-headline-sm text-on-surface-variant">% CV</span>
+</div>
+</div>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[1.25rem]">show_chart</span>
+</span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Goal: ≤ 36.0%</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[1rem]">verified</span>
+<span>Ultra Stable</span>
+</span>
+</div>
+</div>
+<!-- Card 4: Active Sensor Time -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block mb-1">Active CGM Sensor Time</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">99.4</span>
+<span class="font-metric-display text-headline-sm text-on-surface-variant">%</span>
+</div>
+</div>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-tertiary-fixed/40 text-tertiary">
+<span class="material-symbols-outlined text-[1.25rem]">sensors</span>
+</span>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Dexcom G7</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>6,870 / 6,912 Pts</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Primary AGP Ambulatory Glucose Profile Visualizer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<!-- Chart Header & Legend -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ambulatory Glucose Profile (AGP) Modal Day</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">24-Hour Median Curve</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Aggregated percentile bands (10th, 25th, 50th median, 75th, 90th) over 24 calendar days.</p>
+</div>
+<!-- Legend Markers -->
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-4 h-0.5 bg-primary rounded-full"></span>
+<span>50% Median Line</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3 bg-primary/20 rounded-xs"></span>
+<span>25% – 75% Corridor</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3 bg-primary/10 rounded-xs"></span>
+<span>10% – 90% Range</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3 bg-tertiary-fixed rounded-xs"></span>
+<span class="text-tertiary font-semibold">Target (70-140 mg/dL)</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Graphic for AGP Modal Curve -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-md relative overflow-hidden">
+<!-- Target corridor watermark -->
+<div class="absolute inset-x-space-md top-24 bottom-24 bg-surface-bright/80 rounded pointer-events-none"></div>
+<div class="w-full overflow-x-auto">
+<div class="min-w-[760px] h-[340px] relative">
+<!-- Background Grid & Y-Axis Reference Markers -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none text-label-sm font-label-sm text-outline/80 pb-6 pr-4">
+<div class="flex items-center justify-between w-full">
+<span>250 mg/dL (High alert)</span>
+<span class="w-full ml-4 h-[1px] bg-outline-variant/30"></span>
+</div>
+<div class="flex items-center justify-between w-full">
+<span class="text-primary font-semibold">180 mg/dL (Target ceiling)</span>
+<span class="w-full ml-4 h-[1px] bg-primary/25"></span>
+</div>
+<div class="flex items-center justify-between w-full">
+<span class="text-tertiary font-semibold">140 mg/dL (Postprandial target)</span>
+<span class="w-full ml-4 h-[1px] bg-tertiary-container/30"></span>
+</div>
+<div class="flex items-center justify-between w-full">
+<span class="text-tertiary font-semibold">70 mg/dL (Target floor)</span>
+<span class="w-full ml-4 h-[1px] bg-tertiary-container/30"></span>
+</div>
+<div class="flex items-center justify-between w-full">
+<span class="text-error font-semibold">54 mg/dL (Hypo threshold)</span>
+<span class="w-full ml-4 h-[1px] bg-error/25"></span>
+</div>
+</div>
+<!-- SVG Percentile Visualization -->
+<svg class="absolute inset-0 w-full h-[310px] overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 300">
+<defs>
+<lineargradient id="corridor90" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ad2737" stop-opacity="0.16"></stop>
+<stop offset="100%" stop-color="#ad2737" stop-opacity="0.04"></stop>
+</lineargradient>
+<lineargradient id="corridor75" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ad2737" stop-opacity="0.32"></stop>
+<stop offset="100%" stop-color="#ad2737" stop-opacity="0.12"></stop>
+</lineargradient>
+</defs>
+<!-- Target Corridor Safe Area 70-140 mg/dL (Y ~ 160 to 230) -->
+<rect fill="#a4f2d8" fill-opacity="0.18" height="90" rx="4" width="920" x="80" y="140"></rect>
+<!-- 10th - 90th Percentile Ribbon Band -->
+<path d="M 80 215 
+                     C 150 210, 220 220, 300 170 
+                     C 380 135, 450 148, 550 160 
+                     C 650 170, 720 120, 800 130 
+                     C 880 140, 940 180, 1000 195 
+                     L 1000 245 
+                     C 940 238, 880 220, 800 210 
+                     C 720 200, 650 225, 550 220 
+                     C 450 215, 380 205, 300 225 
+                     C 220 240, 150 235, 80 240 Z" fill="url(#corridor90)"></path>
+<!-- 25th - 75th Percentile Interquartile Range Band -->
+<path d="M 80 205 
+                     C 150 200, 220 208, 300 180 
+                     C 380 155, 450 162, 550 172 
+                     C 650 180, 720 145, 800 152 
+                     C 880 160, 940 190, 1000 205 
+                     L 1000 230 
+                     C 940 220, 880 205, 800 195 
+                     C 720 190, 650 208, 550 205 
+                     C 450 202, 380 195, 300 212 
+                     C 220 222, 150 220, 80 225 Z" fill="url(#corridor75)"></path>
+<!-- 50th Percentile / Median Line -->
+<path d="M 80 210 
+                     C 150 205, 220 212, 300 190 
+                     C 380 168, 450 174, 550 182 
+                     C 650 190, 720 160, 800 168 
+                     C 880 178, 940 200, 1000 215" fill="none" stroke="#ad2737" stroke-linecap="round" stroke-width="2.75"></path>
+<!-- Excursion Pin 1: Post-Breakfast Peak -->
+<circle cx="340" cy="180" fill="#ad2737" r="5"></circle>
+<circle cx="340" cy="180" fill="#ad2737" fill-opacity="0.2" r="10"></circle>
+<!-- Excursion Pin 2: Post-Dinner Peak -->
+<circle cx="780" cy="164" fill="#ad2737" r="5"></circle>
+<circle cx="780" cy="164" fill="#ad2737" fill-opacity="0.2" r="10"></circle>
+</svg>
+<!-- Annotations & Excursion Badges Floating Overlay -->
+<div class="absolute left-[330px] top-[48px] bg-surface-container-lowest px-2.5 py-1 rounded shadow-xs text-on-surface font-label-sm text-label-sm border-l-2 border-primary pointer-events-none hidden sm:block">
+<span class="font-bold text-primary">Breakfast Peak:</span> 138 mg/dL avg (09:15)
+          </div>
+<div class="absolute left-[720px] top-[34px] bg-surface-container-lowest px-2.5 py-1 rounded shadow-xs text-on-surface font-label-sm text-label-sm border-l-2 border-primary pointer-events-none hidden sm:block">
+<span class="font-bold text-primary">Dinner Peak:</span> 146 mg/dL avg (19:40)
+          </div>
+<!-- X-Axis Timestamps (24-Hour Horizon) -->
+<div class="absolute bottom-0 left-[80px] right-0 flex justify-between text-label-sm font-label-sm text-outline pt-2">
+<span>00:00</span>
+<span>03:00</span>
+<span>06:00</span>
+<span class="font-bold text-on-surface">09:00</span>
+<span>12:00</span>
+<span>15:00</span>
+<span>18:00</span>
+<span class="font-bold text-on-surface">21:00</span>
+<span>23:59</span>
+</div>
+</div>
+</div>
+<!-- Clinical Diagnostic Insight Strip below Graph -->
+<div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[1.125rem]">info</span>
+<span>Postprandial glycemic excursions remain well-buffered. No prolonged nocturnal hypoglycemic depressions detected.</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold self-end sm:self-auto cursor-pointer hover:underline">
+<span>Expand Day-by-Day Overlays</span>
+<span class="material-symbols-outlined text-[1rem]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Segmented Analysis Grid (2 Balanced Structural Columns) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Time-in-Range (TIR) Standard Clinical Breakdown (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Time in Range (TIR)</h2>
+<p class="font-body-sm text-body-sm text-outline">Clinical Consensus Standards (ADA/EASD consensus benchmarks)</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md font-bold text-tertiary">94%</span>
+<span class="font-label-sm text-label-sm text-outline block">In Range (≥70%)</span>
+</div>
+</div>
+<!-- Combined Horizontal Progress Stack Bar -->
+<div class="space-y-1.5">
+<div class="h-6 w-full bg-surface-container-low rounded-full overflow-hidden flex shadow-inner">
+<!-- Very High: 0% -->
+<!-- High: 4% -->
+<div class="h-full bg-secondary-container" style="width: 4%;" title="High (181-250 mg/dL): 4%"></div>
+<!-- In Target: 94% -->
+<div class="h-full bg-tertiary-fixed" style="width: 94%;" title="In Target (70-180 mg/dL): 94%"></div>
+<!-- Low: 2% -->
+<div class="h-full bg-primary-container" style="width: 2%;" title="Low (54-69 mg/dL): 2%"></div>
+<!-- Very Low: 0% -->
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-outline px-1">
+<span>0%</span>
+<span>Target Corridor: 70 - 180 mg/dL</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Segment Details Breakdown Rows -->
+<div class="space-y-space-xs pt-space-xs">
+<!-- 1. Very High -->
+<div class="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Very High</p>
+<p class="font-body-sm text-body-sm text-outline">&gt; 250 mg/dL (&gt; 13.9 mmol/L)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<span class="font-label-sm text-label-sm text-outline">Goal: &lt; 1%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-bold min-w-[50px] text-center">0%</span>
+</div>
+</div>
+<!-- 2. High / Elevated -->
+<div class="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">High / Elevated</p>
+<p class="font-body-sm text-body-sm text-outline">181 – 250 mg/dL (10.1 - 13.9 mmol/L)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<span class="font-label-sm text-label-sm text-outline">Goal: &lt; 25%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md font-bold min-w-[50px] text-center">4%</span>
+</div>
+</div>
+<!-- 3. In Target Range -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low/70 transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">In Target Range</p>
+<p class="font-body-sm text-body-sm text-outline">70 – 180 mg/dL (3.9 - 10.0 mmol/L)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Goal: &gt; 70%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md font-bold min-w-[50px] text-center">94%</span>
+</div>
+</div>
+<!-- 4. Low / Hypo -->
+<div class="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Low (Hypoglycemia)</p>
+<p class="font-body-sm text-body-sm text-outline">54 – 69 mg/dL (3.0 - 3.8 mmol/L)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<span class="font-label-sm text-label-sm text-outline">Goal: &lt; 4%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed-dim/40 text-on-secondary-fixed font-label-md text-label-md font-bold min-w-[50px] text-center">2%</span>
+</div>
+</div>
+<!-- 5. Very Low -->
+<div class="flex items-center justify-between p-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-3 h-3 rounded-full bg-error-container"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Very Low (Urgent Low)</p>
+<p class="font-body-sm text-body-sm text-outline">&lt; 54 mg/dL (&lt; 3.0 mmol/L)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-right">
+<span class="font-label-sm text-label-sm text-outline">Goal: &lt; 1%</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-bold min-w-[50px] text-center">0%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Meal Slot Comparative Breakdown Table & Extremes (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Meal Slots Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md flex-1">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Meal Slot Averages</h2>
+<p class="font-body-sm text-body-sm text-outline">Event-triggered telemetry tracking</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[1.25rem]">restaurant</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Fasting -->
+<div class="flex items-center justify-between py-2 px-3 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.125rem]">bedtime</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fasting Average</span>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">96</span>
+<span class="font-body-sm text-body-sm text-outline ml-1">mg/dL (4.8 mmol/L)</span>
+</div>
+</div>
+<!-- Pre-Meal -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.125rem]">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">Pre-Meal Average</span>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">108</span>
+<span class="font-body-sm text-body-sm text-outline ml-1">mg/dL</span>
+</div>
+</div>
+<!-- Post-Meal -->
+<div class="flex items-center justify-between py-2 px-3 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.125rem]">timer</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Post-Meal (2h Peak)</span>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">138</span>
+<span class="font-body-sm text-body-sm text-outline ml-1">mg/dL</span>
+</div>
+</div>
+<!-- Bedtime -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.125rem]">nightlight</span>
+<span class="font-label-md text-label-md text-on-surface">Bedtime Average</span>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-on-surface">114</span>
+<span class="font-body-sm text-body-sm text-outline ml-1">mg/dL</span>
+</div>
+</div>
+</div>
+<!-- Recorded Period Extremes -->
+<div class="pt-space-sm space-y-2">
+<p class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-outline">Report Extremes &amp; Nadirs</p>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline block">Highest Peak</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">184</span>
+<span class="text-label-sm font-label-sm text-outline">mg/dL</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline block mt-0.5">Oct 12 • 13:45</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline block">Lowest Nadir</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">72</span>
+<span class="text-label-sm font-label-sm text-outline">mg/dL</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline block mt-0.5">Oct 08 • 04:10</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Doctor Attestation Callout -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Warm portrait photograph of Dr. Robert Miller, endocrinologist in clinical white coat with soft ambient background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7sJgmDXxEHedSo6FfYA5ILcorIl-KFle-h3UVndgIXbQo3jHCLbGCNZKtXjR7fAqR5qVC8ZAKhLAWPlxLTKv6NaoBJU2BGliF2CQV4oM7XM4l0nVuniJh7c758HNshxuaWgnWhGGjkYSHsiPLWdKW4Ou-24eEdlOLZHDD1D3ts1v584-XBaoup8HNRTy-06GBc0dJ21EutmIN8do94VTq52nOtM8NR-9k63gyFg"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface">Dr. Robert Miller</span>
+<span class="material-symbols-outlined text-[1rem] text-tertiary">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Last consultation sign-off: Oct 19, 2024</p>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline inline-flex items-center gap-0.5 mt-0.5" href="#">
+<span>Send Direct Clinical Message</span>
+<span class="material-symbols-outlined text-[0.875rem]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekly Stability Heatmap Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Glycemic Stability Time-of-Day Matrix</h2>
+<p class="font-body-sm text-body-sm text-outline">Distribution of glucose in-range density by meal window and day of week</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Stability Scale:</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="w-3.5 h-3.5 rounded bg-primary-container/20"></span>
+<span class="text-outline">Variable</span>
+<span class="w-3.5 h-3.5 rounded bg-tertiary-fixed ml-2"></span>
+<span class="text-on-surface font-semibold">95%+ In-Target</span>
+</div>
+</div>
+</div>
+<!-- Heatmap Grid -->
+<div class="overflow-x-auto">
+<div class="min-w-[640px] space-y-2">
+<!-- Time Slots Label -->
+<div class="grid grid-cols-8 gap-2 font-label-sm text-label-sm text-outline text-center">
+<span class="text-left pl-2">Time Slot</span>
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+<!-- 12 AM - 8 AM -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant pl-2">12 AM – 8 AM</span>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">98%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">99%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">97%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">96%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">98%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">94%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">99%</div>
+</div>
+<!-- 8 AM - 4 PM -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant pl-2">8 AM – 4 PM</span>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">95%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">92%</div>
+<div class="h-8 rounded bg-secondary-fixed flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">88%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">94%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">93%</div>
+<div class="h-8 rounded bg-secondary-fixed flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">86%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">91%</div>
+</div>
+<!-- 4 PM - 12 AM -->
+<div class="grid grid-cols-8 gap-2 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant pl-2">4 PM – 12 AM</span>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">96%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">97%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">95%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">96%</div>
+<div class="h-8 rounded bg-secondary-fixed flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">89%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">92%</div>
+<div class="h-8 rounded bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">97%</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,365 @@
+{
+  "timestamp": "2026-11-19T19:00:47.379Z",
+  "durationMs": 79628,
+  "passed": false,
+  "stats": {
+    "total": 165,
+    "passed": 121,
+    "failed": 29,
+    "suites": 32
+  },
+  "tiers": {
+    "tier1_features": {
+      "totalSuites": 12,
+      "passedSuites": 8,
+      "failedSuites": 4,
+      "totalTests": 74,
+      "passed": 53,
+      "failed": 18,
+      "files": [
+        {
+          "file": "01-landing-sections.test.mjs",
+          "passed": true,
+          "durationMs": 1582,
+          "tests": 12,
+          "pass": 12,
+          "fail": 0
+        },
+        {
+          "file": "02-theme-tokens.test.mjs",
+          "passed": true,
+          "durationMs": 1522,
+          "tests": 8,
+          "pass": 8,
+          "fail": 0
+        },
+        {
+          "file": "03-dashboard-kpis.test.mjs",
+          "passed": true,
+          "durationMs": 2642,
+          "tests": 6,
+          "pass": 6,
+          "fail": 0
+        },
+        {
+          "file": "04-metabolic-gauge.test.mjs",
+          "passed": true,
+          "durationMs": 1437,
+          "tests": 6,
+          "pass": 6,
+          "fail": 0
+        },
+        {
+          "file": "05-agp-chart.test.mjs",
+          "passed": true,
+          "durationMs": 1466,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "06-slot-matrix.test.mjs",
+          "passed": true,
+          "durationMs": 1444,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "07-tir-donut.test.mjs",
+          "passed": true,
+          "durationMs": 1442,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "08-history-table.test.mjs",
+          "passed": true,
+          "durationMs": 2257,
+          "tests": 6,
+          "pass": 6,
+          "fail": 0
+        },
+        {
+          "file": "09-reports-view.test.mjs",
+          "passed": false,
+          "durationMs": 2216,
+          "tests": 5,
+          "pass": 1,
+          "fail": 4
+        },
+        {
+          "file": "10-trends-view.test.mjs",
+          "passed": false,
+          "durationMs": 1391,
+          "tests": 5,
+          "pass": 0,
+          "fail": 5
+        },
+        {
+          "file": "11-settings-view.test.mjs",
+          "passed": false,
+          "durationMs": 1518,
+          "tests": 6,
+          "pass": 0,
+          "fail": 6
+        },
+        {
+          "file": "12-auth-modals.test.mjs",
+          "passed": false,
+          "durationMs": 1420,
+          "tests": 5,
+          "pass": 2,
+          "fail": 3
+        }
+      ]
+    },
+    "tier2_boundaries": {
+      "totalSuites": 8,
+      "passedSuites": 8,
+      "failedSuites": 0,
+      "totalTests": 35,
+      "passed": 35,
+      "failed": 0,
+      "files": [
+        {
+          "file": "01-glucose-range.test.mjs",
+          "passed": true,
+          "durationMs": 6275,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "02-empty-value.test.mjs",
+          "passed": true,
+          "durationMs": 1933,
+          "tests": 4,
+          "pass": 4,
+          "fail": 0
+        },
+        {
+          "file": "03-slot-uniqueness.test.mjs",
+          "passed": true,
+          "durationMs": 3274,
+          "tests": 2,
+          "pass": 2,
+          "fail": 0
+        },
+        {
+          "file": "04-daily-limit.test.mjs",
+          "passed": true,
+          "durationMs": 5172,
+          "tests": 3,
+          "pass": 3,
+          "fail": 0
+        },
+        {
+          "file": "05-future-date.test.mjs",
+          "passed": true,
+          "durationMs": 1961,
+          "tests": 3,
+          "pass": 3,
+          "fail": 0
+        },
+        {
+          "file": "06-unauthenticated.test.mjs",
+          "passed": true,
+          "durationMs": 1601,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "07-auth-boundaries.test.mjs",
+          "passed": true,
+          "durationMs": 2123,
+          "tests": 6,
+          "pass": 6,
+          "fail": 0
+        },
+        {
+          "file": "08-input-sanitization.test.mjs",
+          "passed": true,
+          "durationMs": 3002,
+          "tests": 7,
+          "pass": 7,
+          "fail": 0
+        }
+      ]
+    },
+    "tier3_combinations": {
+      "totalSuites": 7,
+      "passedSuites": 6,
+      "failedSuites": 1,
+      "totalTests": 31,
+      "passed": 27,
+      "failed": 2,
+      "files": [
+        {
+          "file": "01-theme-switching.test.mjs",
+          "passed": true,
+          "durationMs": 1444,
+          "tests": 4,
+          "pass": 4,
+          "fail": 0
+        },
+        {
+          "file": "02-date-filtering.test.mjs",
+          "passed": true,
+          "durationMs": 2500,
+          "tests": 4,
+          "pass": 4,
+          "fail": 0
+        },
+        {
+          "file": "03-app-mode-transition.test.mjs",
+          "passed": true,
+          "durationMs": 1477,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "04-crud-synchronization.test.mjs",
+          "passed": true,
+          "durationMs": 5342,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "05-slot-cascade.test.mjs",
+          "passed": true,
+          "durationMs": 1858,
+          "tests": 5,
+          "pass": 5,
+          "fail": 0
+        },
+        {
+          "file": "06-history-filters.test.mjs",
+          "passed": true,
+          "durationMs": 2625,
+          "tests": 4,
+          "pass": 4,
+          "fail": 0
+        },
+        {
+          "file": "07-tab-navigation.test.mjs",
+          "passed": false,
+          "durationMs": 1744,
+          "tests": 4,
+          "pass": 2,
+          "fail": 2
+        }
+      ]
+    },
+    "tier4_scenarios": {
+      "totalSuites": 5,
+      "passedSuites": 1,
+      "failedSuites": 4,
+      "totalTests": 25,
+      "passed": 6,
+      "failed": 9,
+      "files": [
+        {
+          "file": "01-patient-onboarding.test.mjs",
+          "passed": false,
+          "durationMs": 2931,
+          "tests": 5,
+          "pass": 2,
+          "fail": 3
+        },
+        {
+          "file": "02-full-day-monitoring.test.mjs",
+          "passed": true,
+          "durationMs": 5417,
+          "tests": 6,
+          "pass": 6,
+          "fail": 0
+        },
+        {
+          "file": "03-hypo-alert-workflow.test.mjs",
+          "passed": false,
+          "durationMs": 3121,
+          "tests": 4,
+          "pass": 2,
+          "fail": 2
+        },
+        {
+          "file": "04-clinician-report.test.mjs",
+          "passed": false,
+          "durationMs": 2893,
+          "tests": 5,
+          "pass": 3,
+          "fail": 2
+        },
+        {
+          "file": "05-telemetry-export.test.mjs",
+          "passed": false,
+          "durationMs": 2505,
+          "tests": 5,
+          "pass": 3,
+          "fail": 2
+        }
+      ]
+    }
+  },
+  "failures": [
+    {
+      "tier": "tier1_features",
+      "file": "09-reports-view.test.mjs",
+      "durationMs": 2216,
+      "error": "TAP version 13\n# Subtest: Tier 1 — Feature Coverage: 09 Clinical Reports View\n    # Subtest: verifies 4 core clinical benchmark metrics (GMI, CV, Mean Glucose, Active Time)\n    not ok 1 - verifies 4 core clinical benchmark metrics (GMI, CV, Mean Glucose, Active Time)\n      ---\n      duration_ms: 2.0839\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\09-reports-view.test.mjs:10:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must declare GMI benchmark'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/09-reports-view.test.mjs:11:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Test.start (node:internal/test_runner/test:829:17)\n        node:internal/test_runner/test:1308:71\n        node:internal/per_context/primordials:483:82\n        new Promise (<anonymous>)\n        new SafePromise (node:internal/per_context/primordials:451:29)\n        node:internal/per_context/primordials:483:9\n        Array.map (<anonymous>)\n      ...\n    # Subtest: verifies certified clinician attestation card from Dr. Robert Miller\n    not ok 2 - verifies certified clinician attestation card from Dr. Robert Miller\n      ---\n      duration_ms: 0.1917\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\09-reports-view.test.mjs:17:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must feature Dr. Robert Miller clinical attestation'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/09-reports-view.test.mjs:18:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Promise.all (index 0)\n        async Suite.run (node:internal/test_runner/test:1310:7)\n        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n      ...\n    # Subtest: verifies 5-tier TIR stacked consensus distribution thresholds\n    not ok 3 - verifies 5-tier TIR stacked consensus distribution thresholds\n      ---\n      duration_ms: 0.2079\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\09-reports-view.test.mjs:25:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must define international AGP consensus threshold 70 mg/dL'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/09-reports-view.test.mjs:28:14)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: verifies live backend /api/reports endpoint generates structured metrics\n    ok 4 - verifies live backend /api/reports endpoint generates structured metrics\n      ---\n      duration_ms: 790.2391\n      ...\n    1..4\nnot ok 1 - Tier 1 — Feature Coverage: 09 Clinical Reports View\n  ---\n  duration_ms: 794.441\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\09-reports-view.test.mjs:7:1\"\n  failureType: 'subtestsFailed'\n  error: '3 subtests failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 1\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1541.2002\n"
+    },
+    {
+      "tier": "tier1_features",
+      "file": "10-trends-view.test.mjs",
+      "durationMs": 1391,
+      "error": "TAP version 13\n# Subtest: Tier 1 — Feature Coverage: 10 Trends & Circadian Analytics\n    # Subtest: renders 24-hour circadian profile canvas partitioned into diurnal zones\n    not ok 1 - renders 24-hour circadian profile canvas partitioned into diurnal zones\n      ---\n      duration_ms: 1.6995\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\10-trends-view.test.mjs:8:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must render circadian profile section'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/10-trends-view.test.mjs:9:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Test.start (node:internal/test_runner/test:829:17)\n        node:internal/test_runner/test:1308:71\n        node:internal/per_context/primordials:483:82\n        new Promise (<anonymous>)\n        new SafePromise (node:internal/per_context/primordials:451:29)\n        node:internal/per_context/primordials:483:9\n        Array.map (<anonymous>)\n      ...\n    # Subtest: evaluates Dawn Phenomenon heuristic check (04:00–08:00 AM rise)\n    not ok 2 - evaluates Dawn Phenomenon heuristic check (04:00–08:00 AM rise)\n      ---\n      duration_ms: 0.4498\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\10-trends-view.test.mjs:13:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must include Dawn Phenomenon assessment'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/10-trends-view.test.mjs:14:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Promise.all (index 0)\n        async Suite.run (node:internal/test_runner/test:1310:7)\n        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n      ...\n    # Subtest: provides comparative daytime vs nighttime TIR bars\n    not ok 3 - provides comparative daytime vs nighttime TIR bars\n      ---\n      duration_ms: 0.3874\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\10-trends-view.test.mjs:21:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must compare daytime vs nighttime metrics'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/10-trends-view.test.mjs:22:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: surfaces AI lifestyle pattern correlations (carbs, exercise, nocturnal stability)\n    not ok 4 - surfaces AI lifestyle pattern correlations (carbs, exercise, nocturnal stability)\n      ---\n      duration_ms: 0.2639\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\10-trends-view.test.mjs:26:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must provide lifestyle correlation insights'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/10-trends-view.test.mjs:27:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..4\nnot ok 1 - Tier 1 — Feature Coverage: 10 Trends & Circadian Analytics\n  ---\n  duration_ms: 4.6227\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\10-trends-view.test.mjs:5:1\"\n  failureType: 'subtestsFailed'\n  error: '4 subtests failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 0\n# fail 4\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 736.692\n"
+    },
+    {
+      "tier": "tier1_features",
+      "file": "11-settings-view.test.mjs",
+      "durationMs": 1518,
+      "error": "TAP version 13\n# Subtest: Tier 1 — Feature Coverage: 11 Settings & Clinical Preferences\n    # Subtest: organizes preferences into category navigation tabs\n    not ok 1 - organizes preferences into category navigation tabs\n      ---\n      duration_ms: 1.1852\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:8:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must contain categorized settings tabs'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/11-settings-view.test.mjs:9:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Test.start (node:internal/test_runner/test:829:17)\n        node:internal/test_runner/test:1308:71\n        node:internal/per_context/primordials:483:82\n        new Promise (<anonymous>)\n        new SafePromise (node:internal/per_context/primordials:451:29)\n        node:internal/per_context/primordials:483:9\n        Array.map (<anonymous>)\n      ...\n    # Subtest: provides glycemic unit selection (mg/dL vs mmol/L)\n    not ok 2 - provides glycemic unit selection (mg/dL vs mmol/L)\n      ---\n      duration_ms: 0.6289\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:15:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must support mg/dL units'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/11-settings-view.test.mjs:16:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Promise.all (index 0)\n        async Suite.run (node:internal/test_runner/test:1310:7)\n        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)\n      ...\n    # Subtest: includes two-factor authentication (2FA) and security controls\n    not ok 3 - includes two-factor authentication (2FA) and security controls\n      ---\n      duration_ms: 0.6938\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:20:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must offer 2FA / authentication security controls'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/11-settings-view.test.mjs:21:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: provides clinician care team sharing management\n    not ok 4 - provides clinician care team sharing management\n      ---\n      duration_ms: 0.4086\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:27:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must support clinician sharing authorization'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/11-settings-view.test.mjs:28:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: provides telemetry export options (CSV, FHIR JSON) and account management\n    not ok 5 - provides telemetry export options (CSV, FHIR JSON) and account management\n      ---\n      duration_ms: 0.3632\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:34:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must support telemetry data export'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/11-settings-view.test.mjs:35:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..5\nnot ok 1 - Tier 1 — Feature Coverage: 11 Settings & Clinical Preferences\n  ---\n  duration_ms: 5.4911\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\11-settings-view.test.mjs:5:1\"\n  failureType: 'subtestsFailed'\n  error: '5 subtests failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 5\n# suites 1\n# pass 0\n# fail 5\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 795.2466\n"
+    },
+    {
+      "tier": "tier1_features",
+      "file": "12-auth-modals.test.mjs",
+      "durationMs": 1420,
+      "error": "TAP version 13\n# Subtest: Tier 1 — Feature Coverage: 12 Authentication & Clinical Onboarding\n    # Subtest: renders credential input fields for email and password\n    ok 1 - renders credential input fields for email and password\n      ---\n      duration_ms: 0.9341\n      ...\n    # Subtest: provides single-click demo account auto-fill helper\n    ok 2 - provides single-click demo account auto-fill helper\n      ---\n      duration_ms: 0.1497\n      ...\n    # Subtest: renders password strength evaluation in clinical registration\n    not ok 3 - renders password strength evaluation in clinical registration\n      ---\n      duration_ms: 0.6253\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\12-auth-modals.test.mjs:18:3\"\n      failureType: 'testCodeFailure'\n      error: 'Registration form must render password strength meter in AuthModal.jsx'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/12-auth-modals.test.mjs:19:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: includes clinical condition tags (Type 1, Type 2, Gestational)\n    not ok 4 - includes clinical condition tags (Type 1, Type 2, Gestational)\n      ---\n      duration_ms: 0.182\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\12-auth-modals.test.mjs:25:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must include Type 1 condition tag in AuthModal.jsx'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier1-features/12-auth-modals.test.mjs:26:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..4\nnot ok 1 - Tier 1 — Feature Coverage: 12 Authentication & Clinical Onboarding\n  ---\n  duration_ms: 3.6511\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier1-features\\\\12-auth-modals.test.mjs:5:1\"\n  failureType: 'subtestsFailed'\n  error: '2 subtests failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 2\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 741.2557\n"
+    },
+    {
+      "tier": "tier3_combinations",
+      "file": "07-tab-navigation.test.mjs",
+      "durationMs": 1744,
+      "error": "TAP version 13\n# Subtest: Tier 3 — Combinations: 07 Tab Navigation & Screen Routing\n    # Subtest: renders semantic <aside> element with responsive 72-width navigation bar\n    ok 1 - renders semantic <aside> element with responsive 72-width navigation bar\n      ---\n      duration_ms: 2.0283\n      ...\n    # Subtest: declares navigation items for all core application modules\n    ok 2 - declares navigation items for all core application modules\n      ---\n      duration_ms: 0.2816\n      ...\n    # Subtest: App.jsx binds onSelectTab and manages activeTab dynamic view rendering\n    not ok 3 - App.jsx binds onSelectTab and manages activeTab dynamic view rendering\n      ---\n      duration_ms: 1.6281\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier3-combinations\\\\07-tab-navigation.test.mjs:21:3\"\n      failureType: 'testCodeFailure'\n      error: 'App.jsx must mount Reports component for reports tab'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier3-combinations/07-tab-navigation.test.mjs:26:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        Suite.processPendingSubtests (node:internal/test_runner/test:629:18)\n        Test.postRun (node:internal/test_runner/test:1042:19)\n        Test.run (node:internal/test_runner/test:970:12)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..3\nnot ok 1 - Tier 3 — Combinations: 07 Tab Navigation & Screen Routing\n  ---\n  duration_ms: 6.4649\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier3-combinations\\\\07-tab-navigation.test.mjs:5:1\"\n  failureType: 'subtestsFailed'\n  error: '1 subtest failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 3\n# suites 1\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 901.0767\n"
+    },
+    {
+      "tier": "tier4_scenarios",
+      "file": "01-patient-onboarding.test.mjs",
+      "durationMs": 2931,
+      "error": "TAP version 13\n# Subtest: Tier 4 — Scenarios: 01 Patient Onboarding & First Telemetry Log\n    # Subtest: Step 1: Patient registers new account and receives JWT authentication session\n    ok 1 - Step 1: Patient registers new account and receives JWT authentication session\n      ---\n      duration_ms: 624.4496\n      ...\n    # Subtest: Step 2: Patient retrieves authenticated profile (GET /api/auth/me)\n    ok 2 - Step 2: Patient retrieves authenticated profile (GET /api/auth/me)\n      ---\n      duration_ms: 200.9377\n      ...\n    # Subtest: Step 3: Patient logs their first Fasting glucose reading (95 mg/dL)\n    not ok 3 - Step 3: Patient logs their first Fasting glucose reading (95 mg/dL)\n      ---\n      duration_ms: 20.6449\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\01-patient-onboarding.test.mjs:34:3\"\n      failureType: 'testCodeFailure'\n      error: |-\n        Expected values to be strictly equal:\n        \n        400 !== 201\n        \n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: 201\n      actual: 400\n      operator: 'strictEqual'\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier4-scenarios/01-patient-onboarding.test.mjs:42:12)\n        process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n        async Test.run (node:internal/test_runner/test:932:9)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    # Subtest: Step 4: Newly onboarded patient dashboard reports show 1 reading and 95.0 mg/dL baseline\n    not ok 4 - Step 4: Newly onboarded patient dashboard reports show 1 reading and 95.0 mg/dL baseline\n      ---\n      duration_ms: 268.6678\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\01-patient-onboarding.test.mjs:48:3\"\n      failureType: 'testCodeFailure'\n      error: |-\n        Expected values to be strictly equal:\n        \n        0 !== 1\n        \n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: 1\n      actual: 0\n      operator: 'strictEqual'\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier4-scenarios/01-patient-onboarding.test.mjs:53:12)\n        process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n        async Test.run (node:internal/test_runner/test:932:9)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..4\nnot ok 1 - Tier 4 — Scenarios: 01 Patient Onboarding & First Telemetry Log\n  ---\n  duration_ms: 1340.2956\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\01-patient-onboarding.test.mjs:7:1\"\n  failureType: 'subtestsFailed'\n  error: '2 subtests failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 2\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 2118.8704\n"
+    },
+    {
+      "tier": "tier4_scenarios",
+      "file": "03-hypo-alert-workflow.test.mjs",
+      "durationMs": 3121,
+      "error": "TAP version 13\n# Subtest: Tier 4 — Scenarios: 03 Hypoglycemic Alert & ADA Rule of 15 Workflow\n    # Subtest: Step 1: Log acute hypoglycemic reading at 58 mg/dL (< 70 mg/dL threshold)\n    ok 1 - Step 1: Log acute hypoglycemic reading at 58 mg/dL (< 70 mg/dL threshold)\n      ---\n      duration_ms: 427.8165\n      ...\n    # Subtest: Step 2: Reports engine identifies reading below 70 mg/dL as acute Low event\n    ok 2 - Step 2: Reports engine identifies reading below 70 mg/dL as acute Low event\n      ---\n      duration_ms: 237.9504\n      ...\n    # Subtest: Step 3: Verification of ADA Clinical Rule of 15 Emergency Guidance content\n    not ok 3 - Step 3: Verification of ADA Clinical Rule of 15 Emergency Guidance content\n      ---\n      duration_ms: 1.5711\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\03-hypo-alert-workflow.test.mjs:51:3\"\n      failureType: 'testCodeFailure'\n      error: 'Must declare \"Rule of 15\" header'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier4-scenarios/03-hypo-alert-workflow.test.mjs:52:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..3\nnot ok 1 - Tier 4 — Scenarios: 03 Hypoglycemic Alert & ADA Rule of 15 Workflow\n  ---\n  duration_ms: 1700.0769\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\03-hypo-alert-workflow.test.mjs:8:1\"\n  failureType: 'subtestsFailed'\n  error: '1 subtest failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 3\n# suites 1\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 2467.0874\n"
+    },
+    {
+      "tier": "tier4_scenarios",
+      "file": "04-clinician-report.test.mjs",
+      "durationMs": 2893,
+      "error": "TAP version 13\n# Subtest: Tier 4 — Scenarios: 04 30-Day Clinician Report & AGP Consensus\n    # Subtest: Step 1: Queries complete 30-day AGP clinical dataset via /api/reports\n    ok 1 - Step 1: Queries complete 30-day AGP clinical dataset via /api/reports\n      ---\n      duration_ms: 247.9094\n      ...\n    # Subtest: Step 2: Verifies MTD and Previous Month longitudinal comparison metrics\n    ok 2 - Step 2: Verifies MTD and Previous Month longitudinal comparison metrics\n      ---\n      duration_ms: 235.4645\n      ...\n    # Subtest: Step 3: Verifies cumulative distribution counts in reports payload\n    ok 3 - Step 3: Verifies cumulative distribution counts in reports payload\n      ---\n      duration_ms: 397.5056\n      ...\n    # Subtest: Step 4: Certified Doctor Attestation card matches Dr. Robert Miller credentials\n    not ok 4 - Step 4: Certified Doctor Attestation card matches Dr. Robert Miller credentials\n      ---\n      duration_ms: 0.7741\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\04-clinician-report.test.mjs:54:3\"\n      failureType: 'testCodeFailure'\n      error: 'Clinician attestation must name Dr. Robert Miller'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier4-scenarios/04-clinician-report.test.mjs:55:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..4\nnot ok 1 - Tier 4 — Scenarios: 04 30-Day Clinician Report & AGP Consensus\n  ---\n  duration_ms: 1469.6232\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\04-clinician-report.test.mjs:7:1\"\n  failureType: 'subtestsFailed'\n  error: '1 subtest failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 3\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 2285.015\n"
+    },
+    {
+      "tier": "tier4_scenarios",
+      "file": "05-telemetry-export.test.mjs",
+      "durationMs": 2505,
+      "error": "TAP version 13\n# Subtest: Tier 4 — Scenarios: 05 Telemetry Export & HIPAA Compliance\n    # Subtest: Step 1: Queries live telemetry rows for export payload\n    ok 1 - Step 1: Queries live telemetry rows for export payload\n      ---\n      duration_ms: 245.8256\n      ...\n    # Subtest: Step 2: Validates CSV structure generated by ReadingHistory export engine\n    ok 2 - Step 2: Validates CSV structure generated by ReadingHistory export engine\n      ---\n      duration_ms: 0.4046\n      ...\n    # Subtest: Step 3: Simulates CSV row synthesis and validates RFC 4180 delimiter format\n    ok 3 - Step 3: Simulates CSV row synthesis and validates RFC 4180 delimiter format\n      ---\n      duration_ms: 226.3405\n      ...\n    # Subtest: Step 4: Validates export standards and HIPAA privacy notice in Settings\n    not ok 4 - Step 4: Validates export standards and HIPAA privacy notice in Settings\n      ---\n      duration_ms: 1.2771\n      location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\05-telemetry-export.test.mjs:54:3\"\n      failureType: 'testCodeFailure'\n      error: 'Settings must include export controls'\n      code: 'ERR_ASSERTION'\n      name: 'AssertionError'\n      expected: true\n      actual: false\n      operator: '=='\n      stack: |-\n        TestContext.<anonymous> (file:///D:/don't_know/sweety/tests/e2e/tier4-scenarios/05-telemetry-export.test.mjs:55:12)\n        Test.runInAsyncScope (node:async_hooks:211:14)\n        Test.run (node:internal/test_runner/test:931:25)\n        process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n        async Suite.processPendingSubtests (node:internal/test_runner/test:629:7)\n      ...\n    1..4\nnot ok 1 - Tier 4 — Scenarios: 05 Telemetry Export & HIPAA Compliance\n  ---\n  duration_ms: 954.7477\n  type: 'suite'\n  location: \"D:\\\\don't_know\\\\sweety\\\\tests\\\\e2e\\\\tier4-scenarios\\\\05-telemetry-export.test.mjs:7:1\"\n  failureType: 'subtestsFailed'\n  error: '1 subtest failed'\n  code: 'ERR_TEST_FAILURE'\n  ...\n1..1\n# tests 4\n# suites 1\n# pass 3\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1764.1864\n"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "sweety-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "test": "cd server && npm test",
+    "test:e2e": "node tests/e2e/runner.mjs",
+    "test:e2e:tier1": "node --test tests/e2e/tier1-features/*.test.mjs",
+    "test:e2e:tier2": "node --test tests/e2e/tier2-boundaries/*.test.mjs",
+    "test:e2e:tier3": "node --test tests/e2e/tier3-combinations/*.test.mjs",
+    "test:e2e:tier4": "node --test tests/e2e/tier4-scenarios/*.test.mjs",
+    "seed": "cd server && npm run seed",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:client",
+    "start": "cd server && node src/server.js"
+  }
+}
