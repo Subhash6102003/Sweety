@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { ThemeSelector } from '../components/ThemeSelector';
 import { GoogleAuthModal } from '../components/GoogleAuthModal';
+import { AppleAuthModal } from '../components/AppleAuthModal';
 
 export const SignIn = ({ onNavigate, onSuccess }) => {
-  const { login } = useAuth();
+  const { login, requestEmailCode, loginWithEmailCode } = useAuth();
   const [googleModalOpen, setGoogleModalOpen] = useState(false);
+  const [appleModalOpen, setAppleModalOpen] = useState(false);
+  const [authMode, setAuthMode] = useState('password'); // 'password' | 'emailCode'
   const [email, setEmail] = useState('demo@sweety.app');
   const [password, setPassword] = useState('Password123!');
+  const [emailCode, setEmailCode] = useState('');
+  const [codeSent, setCodeSent] = useState(false);
+  const [infoMessage, setInfoMessage] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberDevice, setRememberDevice] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -17,7 +23,36 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
   const handleSubmit = async (e) => {
     e?.preventDefault();
     setError('');
+    setInfoMessage('');
     setLoading(true);
+
+    if (authMode === 'emailCode') {
+      if (!codeSent) {
+        // Step 1: Request 6-digit OTP code sent via SMTP
+        try {
+          const res = await requestEmailCode(email);
+          setCodeSent(true);
+          setInfoMessage(res.message || `Verification code sent to ${email}`);
+          setLoading(false);
+        } catch (err) {
+          setError(err.message || 'Failed to dispatch email verification code.');
+          setLoading(false);
+        }
+      } else {
+        // Step 2: Verify code and login
+        try {
+          await loginWithEmailCode(email, emailCode);
+          setVerifiedSuccess(true);
+          setTimeout(() => {
+            onSuccess?.();
+          }, 600);
+        } catch (err) {
+          setError(err.message || 'Invalid or expired verification code.');
+          setLoading(false);
+        }
+      }
+      return;
+    }
 
     try {
       await login(email, password);
@@ -135,13 +170,13 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
 
                 <button
                   type="button"
-                  onClick={() => setGoogleModalOpen(true)}
-                  className="group flex items-center justify-center gap-2.5 h-11 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all text-on-surface font-title-md text-sm font-semibold cursor-pointer border border-outline-variant/30"
+                  onClick={() => setAppleModalOpen(true)}
+                  className="group flex items-center justify-center gap-2.5 h-11 px-4 rounded-xl bg-black hover:bg-gray-900 transition-all text-white font-title-md text-sm font-semibold cursor-pointer border border-black shadow-xs"
                 >
-                  <span className="material-symbols-outlined text-[20px] text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
-                    health_metrics
-                  </span>
-                  <span>Apple Health ID</span>
+                  <svg className="w-4 h-4 fill-white shrink-0" viewBox="0 0 170 170">
+                    <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.69-7.79-11.97-14.24-5.99-9.03-10.74-19.34-14.25-30.93-3.51-11.59-5.27-22.65-5.27-33.19 0-14.44 3.51-26.4 10.53-35.87 7.02-9.47 16.03-14.33 27.04-14.59 5.37 0 11.02 1.37 16.96 4.12 5.94 2.74 9.94 4.18 12.01 4.31 1.63-.26 5.86-1.77 12.69-4.53 6.83-2.76 12.44-4.04 16.84-3.84 13.06.66 23.46 5.32 31.2 13.98-11.45 6.94-17.06 16.48-16.83 28.61.23 9.47 3.86 17.51 10.89 24.12 7.03 6.61 15.42 10.33 25.18 11.16-2.04 6.25-4.47 12.55-7.31 18.9zM119.22 31.84c0-7.39 2.66-14.39 7.97-21.01 5.31-6.62 11.75-10.83 19.33-12.63.26 1.45.39 2.82.39 4.12 0 7.39-2.75 14.43-8.24 21.12-5.49 6.69-11.97 10.8-19.45 12.33-.27-1.32-.4-2.63-.4-3.93z" />
+                  </svg>
+                  <span>Apple ID</span>
                 </button>
               </div>
 
@@ -152,6 +187,40 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
                   Or continue with email
                 </span>
               </div>
+
+              {/* Auth Mode Toggle Tabs (Email Code OTP vs Password) */}
+              <div className="flex rounded-xl bg-surface-container-low p-1 mb-4 border border-outline-variant/30">
+                <button
+                  type="button"
+                  onClick={() => { setAuthMode('emailCode'); setError(''); setInfoMessage(''); }}
+                  className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    authMode === 'emailCode'
+                      ? 'bg-primary text-on-primary shadow-xs'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  Email Code (Passwordless)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setAuthMode('password'); setError(''); setInfoMessage(''); }}
+                  className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    authMode === 'password'
+                      ? 'bg-primary text-on-primary shadow-xs'
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  Password Login
+                </button>
+              </div>
+
+              {/* Info Notice */}
+              {infoMessage && (
+                <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[18px]">mail</span>
+                  <span>{infoMessage}</span>
+                </div>
+              )}
 
               {/* Error Alert */}
               {error && (
@@ -166,7 +235,7 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
                 {/* Email Input */}
                 <div>
                   <label className="block font-title-md text-sm text-on-surface font-semibold mb-1.5" htmlFor="email">
-                    Medical ID / Email Address
+                    Patient Email Address
                   </label>
                   <div className="relative flex items-center">
                     <span className="material-symbols-outlined absolute left-3.5 text-on-surface-variant pointer-events-none text-[20px]">
@@ -177,52 +246,99 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
                       type="email"
                       required
                       value={email}
+                      disabled={authMode === 'emailCode' && codeSent}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="clinician_or_patient@sweetyhealth.io"
-                      className="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 border border-outline-variant/40"
+                      placeholder="patient@sweetycare.io"
+                      className="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 border border-outline-variant/40 disabled:opacity-75"
                     />
                   </div>
                 </div>
 
-                {/* Password Input with Reveal Toggle */}
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <label className="block font-title-md text-sm text-on-surface font-semibold" htmlFor="password">
-                      Access Key / Password
-                    </label>
-                    <a
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); alert('For this demo, use: Password123!'); }}
-                      className="font-label-sm text-xs text-primary hover:underline transition-colors"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
-                  <div className="relative flex items-center">
-                    <span className="material-symbols-outlined absolute left-3.5 text-on-surface-variant pointer-events-none text-[20px]">
-                      lock
-                    </span>
-                    <input
-                      id="password"
-                      type={showPassword ? 'text' : 'password'}
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••••••"
-                      className="w-full h-11 pl-11 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 border border-outline-variant/40"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      aria-label="Toggle password visibility"
-                      className="absolute right-3.5 text-on-surface-variant hover:text-on-surface p-1 rounded transition-colors cursor-pointer"
-                    >
-                      <span className="material-symbols-outlined text-[20px]">
-                        {showPassword ? 'visibility_off' : 'visibility'}
+                {/* Password Mode: Password Input */}
+                {authMode === 'password' && (
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="block font-title-md text-sm text-on-surface font-semibold" htmlFor="password">
+                        Access Key / Password
+                      </label>
+                      <a
+                        href="#"
+                        onClick={(e) => { e.preventDefault(); alert('For this demo, use: Password123!'); }}
+                        className="font-label-sm text-xs text-primary hover:underline transition-colors"
+                      >
+                        Forgot password?
+                      </a>
+                    </div>
+                    <div className="relative flex items-center">
+                      <span className="material-symbols-outlined absolute left-3.5 text-on-surface-variant pointer-events-none text-[20px]">
+                        lock
                       </span>
-                    </button>
+                      <input
+                        id="password"
+                        type={showPassword ? 'text' : 'password'}
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="••••••••••••"
+                        className="w-full h-11 pl-11 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md outline-none transition-all placeholder:text-outline/70 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 border border-outline-variant/40"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label="Toggle password visibility"
+                        className="absolute right-3.5 text-on-surface-variant hover:text-on-surface p-1 rounded transition-colors cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-[20px]">
+                          {showPassword ? 'visibility_off' : 'visibility'}
+                        </span>
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {/* Email Code Mode: 6-Digit Code Input */}
+                {authMode === 'emailCode' && codeSent && (
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="block font-title-md text-sm text-on-surface font-semibold" htmlFor="emailCode">
+                        6-Digit Security Verification Code
+                      </label>
+                      <button
+                        type="button"
+                        onClick={() => setCodeSent(false)}
+                        className="text-xs text-primary font-bold hover:underline"
+                      >
+                        Change Email
+                      </button>
+                    </div>
+                    <div className="relative flex items-center">
+                      <span className="material-symbols-outlined absolute left-3.5 text-on-surface-variant pointer-events-none text-[20px]">
+                        key
+                      </span>
+                      <input
+                        id="emailCode"
+                        type="text"
+                        maxLength={6}
+                        required
+                        autoFocus
+                        value={emailCode}
+                        onChange={(e) => setEmailCode(e.target.value)}
+                        placeholder="123456"
+                        className="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-display text-lg tracking-widest text-center font-bold outline-none transition-all placeholder:text-outline/50 focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/25 border border-primary"
+                      />
+                    </div>
+                    <div className="flex items-center justify-between mt-1.5 text-xs text-outline">
+                      <span>Check your inbox &amp; spam folder</span>
+                      <button
+                        type="button"
+                        onClick={handleSubmit}
+                        className="text-primary font-bold hover:underline cursor-pointer"
+                      >
+                        Resend Code
+                      </button>
+                    </div>
+                  </div>
+                )}
 
                 {/* Preferences / Remember Me */}
                 <div className="flex items-center justify-between pt-1">
@@ -240,7 +356,7 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
                   </label>
                   <span className="hidden sm:inline-flex items-center gap-1 font-label-sm text-xs text-tertiary font-semibold">
                     <span className="material-symbols-outlined text-[14px]">shield</span>
-                    MFA Active
+                    SMTP Active
                   </span>
                 </div>
 
@@ -257,13 +373,25 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
                   {loading ? (
                     <>
                       <span className="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
-                      <span>Authenticating Secure Session...</span>
+                      <span>{authMode === 'emailCode' && !codeSent ? 'Sending Code via SMTP...' : 'Verifying Session...'}</span>
                     </>
                   ) : verifiedSuccess ? (
                     <>
                       <span className="material-symbols-outlined text-[18px]">check_circle</span>
                       <span>Credentials Verified</span>
                     </>
+                  ) : authMode === 'emailCode' ? (
+                    codeSent ? (
+                      <>
+                        <span>Verify Code &amp; Sign In</span>
+                        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send 6-Digit Code to Email</span>
+                        <span className="material-symbols-outlined text-[18px]">send</span>
+                      </>
+                    )
                   ) : (
                     <>
                       <span>Sign In to Sweety</span>
@@ -459,6 +587,13 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
         <GoogleAuthModal
           isOpen={googleModalOpen}
           onClose={() => setGoogleModalOpen(false)}
+          onSuccess={() => onSuccess?.()}
+        />
+
+        {/* Apple ID Authentication Modal */}
+        <AppleAuthModal
+          isOpen={appleModalOpen}
+          onClose={() => setAppleModalOpen(false)}
           onSuccess={() => onSuccess?.()}
         />
 

@@ -7,6 +7,8 @@ node_modules/
 .env.local
 .env.*.local
 server/.env
+*.pem
+remote-deploy.sh
 
 # Build Output (Vercel builds client from source)
 client/dist/

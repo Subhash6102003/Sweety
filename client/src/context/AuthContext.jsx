@@ -139,14 +139,96 @@ export const AuthProvider = ({ children }) => {
   };
 
   /**
-   * Update active user profile details (avatar, name, metrics, etc.)
+   * Apple ID SSO Sign In
    */
-  const updateUser = (updatedFields) => {
+  const appleLogin = async (email, name, appleUserId) => {
+    const res = await fetch(getApiUrl('/api/auth/apple'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, name, appleUserId })
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Apple ID authentication failed');
+    }
+    const fullProfile = {
+      ...data.user,
+      role: 'Patient',
+      diagnosis: 'Type 1 Diabetes',
+      avatarUrl: data.user.avatarUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(name || 'Apple Patient')}&background=000&color=fff`
+    };
+    setUser(fullProfile);
+    setToken(data.token);
+    localStorage.setItem('sweety_user', JSON.stringify(fullProfile));
+    localStorage.setItem('sweety_token', data.token);
+    return data;
+  };
+
+  /**
+   * Request 6-digit magic code sent to email
+   */
+  const requestEmailCode = async (email) => {
+    const res = await fetch(getApiUrl('/api/auth/email/request-code'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Failed to dispatch email verification code');
+    }
+    return data;
+  };
+
+  /**
+   * Login with 6-digit email code
+   */
+  const loginWithEmailCode = async (email, code) => {
+    const res = await fetch(getApiUrl('/api/auth/email/verify-code'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, code })
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Failed to verify email code');
+    }
+    const fullProfile = {
+      ...data.user,
+      role: 'Patient',
+      diagnosis: 'Type 1 Diabetes'
+    };
+    setUser(fullProfile);
+    setToken(data.token);
+    localStorage.setItem('sweety_user', JSON.stringify(fullProfile));
+    localStorage.setItem('sweety_token', data.token);
+    return data;
+  };
+
+  /**
+   * Update active user profile details (avatar, name, metrics, etc.) and dispatch SMTP notice
+   */
+  const updateUser = async (updatedFields) => {
     setUser(prev => {
       const updated = { ...(prev || {}), ...updatedFields };
       localStorage.setItem('sweety_user', JSON.stringify(updated));
       return updated;
     });
+
+    if (token) {
+      try {
+        await fetch(getApiUrl('/api/auth/profile'), {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify(updatedFields)
+        });
+      } catch (err) {
+        console.warn('Profile update remote notice error:', err);
+      }
+    }
   };
 
   const logout = () => {
@@ -163,6 +245,9 @@ export const AuthProvider = ({ children }) => {
       login,
       register,
       googleLogin,
+      appleLogin,
+      requestEmailCode,
+      loginWithEmailCode,
       updateUser,
       logout,
       loading,

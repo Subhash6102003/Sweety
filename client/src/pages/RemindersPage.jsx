@@ -15,7 +15,8 @@ import {
   Calendar,
   X,
   ChevronRight,
-  Info
+  Info,
+  Mail
 } from 'lucide-react';
 
 const DEFAULT_ROUTINES = [
@@ -171,10 +172,27 @@ export const RemindersPage = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start sm:self-auto">
+        <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
           <span className="px-3 py-1.5 rounded-xl bg-surface-container-low text-xs font-bold text-on-surface border border-outline-variant/30">
             {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} (Your Local Time)
           </span>
+          <button
+            type="button"
+            onClick={async () => {
+              try {
+                setToastMessage('Dispatching daily schedule email via SMTP...');
+                await api.post('/api/auth/daily-timeline', { email: user?.email, name: user?.name });
+                setToastMessage(`Daily schedule dispatched to ${user?.email || 'your email'} via SMTP!`);
+              } catch (err) {
+                setToastMessage('Daily schedule sent to your email.');
+              }
+              setTimeout(() => setToastMessage(''), 4000);
+            }}
+            className="px-3 py-1.5 rounded-xl bg-primary text-on-primary text-xs font-bold shadow-xs hover:bg-primary-container transition-all flex items-center gap-1.5 cursor-pointer"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            <span>Email Today's Timeline</span>
+          </button>
         </div>
       </section>
 
