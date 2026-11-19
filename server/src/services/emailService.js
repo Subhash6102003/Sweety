@@ -50,6 +50,7 @@ const initTransporter = async () => {
 initTransporter().catch(err => console.warn('Failed to init SMTP transporter:', err));
 
 const SENDER_EMAIL = process.env.SMTP_FROM || (process.env.SMTP_USER ? `"Sweety Clinical Care" <${process.env.SMTP_USER}>` : '"Sweety Clinical Care" <notifications@sweetycare.io>');
+const APP_URL = (process.env.FRONTEND_URL || 'https://sweety-iota.vercel.app').replace(/\/+$/, '');
 
 /**
  * Sweety High-Taste Anti-Slop Clinical Email Base Template
@@ -230,8 +231,10 @@ const wrapEmailTemplate = ({ title, preheader, contentHtml }) => `
       <table cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
           <td>
-            <span class="logo-badge">♥</span>
-            <span class="brand-name">Sweety</span>
+            <a href="${APP_URL}" style="text-decoration:none;color:#ffffff;display:inline-block;">
+              <span class="logo-badge">♥</span>
+              <span class="brand-name">Sweety</span>
+            </a>
             <span class="sub-brand">Continuous Glycemic Telemetry</span>
           </td>
           <td align="right">
@@ -343,7 +346,7 @@ const sendWelcomeEmail = async ({ email, name, mrn }) => {
       </p>
 
       <div style="text-align:center;margin:28px 0 12px 0;">
-        <a href="https://sweety.vercel.app/dashboard" class="btn-primary">
+        <a href="${APP_URL}/dashboard" class="btn-primary">
           Access Patient Dashboard &rarr;
         </a>
       </div>
@@ -385,7 +388,7 @@ const sendProfileUpdatedEmail = async ({ email, name, changes = 'Biometric & Cli
       </p>
 
       <div style="text-align:center;margin:24px 0 10px 0;">
-        <a href="https://sweety.vercel.app/profile" class="btn-primary">
+        <a href="${APP_URL}/profile" class="btn-primary">
           Review Health Profile &rarr;
         </a>
       </div>
@@ -443,7 +446,7 @@ const sendDailyReminderEmail = async ({ email, name }) => {
       </div>
 
       <div style="text-align:center;margin:28px 0 10px 0;">
-        <a href="https://sweety.vercel.app/dashboard" class="btn-primary">
+        <a href="${APP_URL}/dashboard" class="btn-primary">
           Record Today's Checkpoint &rarr;
         </a>
       </div>
@@ -482,6 +485,12 @@ const generateAndSendMagicCode = async ({ email }) => {
       <p style="text-align:center;font-size:12px;color:#726364;margin-top:4px;">
         This code is valid for <strong>10 minutes</strong> and can only be used once.
       </p>
+
+      <div style="text-align:center;margin:22px 0 16px 0;">
+        <a href="${APP_URL}/signin" class="btn-primary">
+          Open Sweety Sign-In &rarr;
+        </a>
+      </div>
 
       <div style="background:#fdf7f7;border:1px solid #f6cfcf;border-radius:14px;padding:14px;margin:20px 0;font-size:12px;color:#3f3636;">
         <strong style="color:#ad2737;display:block;margin-bottom:4px;">Security Notice</strong>
