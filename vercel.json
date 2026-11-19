@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://sweety-api.your-backend.com/api/$1"
+      "destination": "http://18.205.21.230:5000/api/$1"
     },
     {
       "source": "/(.*)",
