@@ -130,14 +130,14 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
         </div>
 
         {/* Actions & Segmented Navigation matching Stitch */}
-        <div className="flex flex-wrap items-center gap-space-sm">
-          <div className="flex items-center p-1 bg-surface-container-low rounded-full border border-outline-variant/30 font-label-md text-label-md">
+        <div className="flex flex-wrap items-center gap-space-sm w-full md:w-auto">
+          <div className="flex items-center p-1 bg-surface-container-low rounded-full border border-outline-variant/30 font-label-md text-label-md overflow-x-auto max-w-full">
             {['Overview', 'Fasting', 'Post-Meal', 'Sensor AGP'].map((tab) => (
               <button
                 key={tab}
                 type="button"
                 onClick={() => setActiveFilter(tab)}
-                className={`px-3.5 py-1.5 rounded-full transition-all ${
+                className={`px-3 sm:px-3.5 py-1.5 rounded-full transition-all whitespace-nowrap text-xs sm:text-sm ${
                   activeFilter === tab
                     ? 'bg-surface-container-lowest text-primary font-bold shadow-xs'
                     : 'text-on-surface-variant hover:text-on-surface'
@@ -148,11 +148,11 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
             ))}
           </div>
 
-          <div className="flex items-center gap-space-xs">
+          <div className="flex flex-wrap items-center gap-space-xs">
             <button
               type="button"
               onClick={() => alert('Widget customizer: All 6 core clinical widgets active.')}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/40 text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-low transition-all"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/40 text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-low transition-all text-xs"
             >
               <PlusCircle className="w-3.5 h-3.5 text-primary" />
               <span>Add Widget</span>
@@ -160,7 +160,7 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
             <button
               type="button"
               onClick={() => setShowMilestones(!showMilestones)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/40 text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-low transition-all"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-surface-container-lowest rounded-lg border border-outline-variant/40 text-on-surface font-label-md text-label-md shadow-xs hover:bg-surface-container-low transition-all text-xs"
             >
               <Layers className="w-3.5 h-3.5 text-outline" />
               <span>{showMilestones ? 'Hide Slots' : 'Meal Slots'}</span>
@@ -169,10 +169,10 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
               id="tour-export-button"
               type="button"
               onClick={() => setReportModalOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-xs hover:bg-primary-container active:scale-95 transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-xs hover:bg-primary-container active:scale-95 transition-all cursor-pointer text-xs"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Export Summary</span>
+              <span>Export</span>
             </button>
           </div>
         </div>
@@ -222,10 +222,10 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
       />
 
       {/* 3. Middle Bento Grid (Metabolic Stability & Fast Log + AGP Telemetry) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg min-w-0">
         
         {/* Left Column (4 cols): Metabolic Stability + Quick Log Card */}
-        <div className="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-md">
+        <div className="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-md min-w-0">
           <MetabolicStabilityCard score={88} change="+1.2" readingsCount={readings.length} />
           <div id="tour-quick-log">
             <QuickGlucoseLogCard
@@ -236,7 +236,7 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
         </div>
 
         {/* Right Column (8 cols): Ambulatory Glucose Profile (AGP) */}
-        <div className="lg:col-span-8 xl:col-span-8">
+        <div className="lg:col-span-8 xl:col-span-8 min-w-0">
           <AmbulatoryGlucoseProfileChart 
             trendData={reports?.trend || []} 
             onOpenLog={() => handleOpenAdd('Morning (fasting)')}
@@ -246,15 +246,15 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
       </div>
 
       {/* 4. Bottom Row (2 Columns): Weekly Heatmap Schedule Matrix & Segmented Donut */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md min-w-0">
         
         {/* Left: Schedule Compliance Matrix (7 cols) */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 min-w-0">
           <SlotComplianceMatrix dailyReadings={readings} />
         </div>
 
         {/* Right: TIR Distribution Donut (5 cols) */}
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-5 min-w-0">
           <TirDistributionGauge distribution={reports?.distribution} />
         </div>
 

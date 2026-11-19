@@ -112,7 +112,7 @@ export const SlotComplianceMatrix = ({ dailyReadings = [] }) => {
   const [hoveredReading, setHoveredReading] = useState(null);
 
   return (
-    <div className="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/40 shadow-xs flex flex-col justify-between">
+    <div className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-lg border border-outline-variant/40 shadow-xs flex flex-col justify-between min-w-0 w-full">
       
       {/* Header */}
       <div>

@@ -68,7 +68,7 @@ export const QuickGlucoseLogCard = ({ onSaveReading, existingSlots = [] }) => {
   const currentSlot = SLOTS.find(s => s.id === selectedSlotId) || SLOTS[0];
 
   return (
-    <div className="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/40 shadow-xs flex flex-col justify-between">
+    <div className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-md border border-outline-variant/40 shadow-xs flex flex-col justify-between min-w-0 w-full">
       
       {/* Header */}
       <div className="flex items-center justify-between mb-space-sm">

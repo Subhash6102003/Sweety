@@ -44,7 +44,7 @@ export const MetabolicStabilityCard = ({ score = 88, change = '+1.2', readingsCo
   }, [score, hasData]);
 
   return (
-    <div className="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/40 shadow-xs flex flex-col justify-between">
+    <div className="bg-surface-container-lowest rounded-xl p-4 sm:p-space-lg border border-outline-variant/40 shadow-xs flex flex-col justify-between min-w-0 w-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-1.5">

@@ -9,8 +9,8 @@ export const SignIn = ({ onNavigate, onSuccess }) => {
   const [googleModalOpen, setGoogleModalOpen] = useState(false);
   const [appleModalOpen, setAppleModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState('password'); // 'password' | 'emailCode'
-  const [email, setEmail] = useState('demo@sweety.app');
-  const [password, setPassword] = useState('Password123!');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [emailCode, setEmailCode] = useState('');
   const [codeSent, setCodeSent] = useState(false);
   const [infoMessage, setInfoMessage] = useState('');
