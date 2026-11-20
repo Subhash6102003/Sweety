@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { TrendingUp, ArrowDownRight, ArrowUpRight, BarChart3, Inbox } from 'lucide-react';
 
-const AnimatedNumber = ({ value, isDecimal = false, suffix = '' }) => {
+const AnimatedNumber = ({ value, isDecimal = false }) => {
   const spanRef = useRef(null);
 
   useEffect(() => {
@@ -31,13 +31,12 @@ const AnimatedNumber = ({ value, isDecimal = false, suffix = '' }) => {
   }, [value, isDecimal]);
 
   if (value === null || value === undefined) {
-    return <span className="text-gray-300 font-normal">—</span>;
+    return <span className="text-outline font-normal">—</span>;
   }
 
   return (
-    <span className="tabular-nums font-extrabold text-gray-900">
-      <span ref={spanRef}>0</span>
-      {suffix && <span className="text-xs font-semibold text-gray-400 ml-1">{suffix}</span>}
+    <span className="tabular-nums font-extrabold text-on-surface" ref={spanRef}>
+      0
     </span>
   );
 };
@@ -90,38 +89,41 @@ export const ReportCard = ({ title, subtitle, data, highlight = false }) => {
         </div>
       ) : (
         <>
-          <div className="my-5 grid grid-cols-3 gap-2 text-center divide-x divide-gray-100">
+          <div className="my-4 grid grid-cols-3 gap-2 sm:gap-2.5">
             {/* Average */}
-            <div className="px-1">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 flex items-center justify-center space-x-1">
-                <TrendingUp className="w-3 h-3 text-theme-primary" />
+            <div className="p-2 sm:p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 flex flex-col items-center justify-between text-center min-w-0">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-outline flex items-center justify-center gap-1 mb-1">
+                <TrendingUp className="w-3 h-3 text-primary shrink-0" />
                 <span>Avg</span>
               </span>
-              <div className="text-lg sm:text-xl mt-1">
-                <AnimatedNumber value={data.average} isDecimal suffix="mg/dL" />
+              <div className="font-display font-extrabold text-base sm:text-lg text-on-surface leading-tight tabular-nums truncate w-full">
+                <AnimatedNumber value={data.average} isDecimal />
               </div>
+              <span className="text-[10px] font-semibold text-outline mt-0.5">mg/dL</span>
             </div>
 
             {/* Highest */}
-            <div className="px-1">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 flex items-center justify-center space-x-1">
-                <ArrowUpRight className="w-3 h-3 text-rose-500" />
+            <div className="p-2 sm:p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 flex flex-col items-center justify-between text-center min-w-0">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-outline flex items-center justify-center gap-1 mb-1">
+                <ArrowUpRight className="w-3 h-3 text-primary shrink-0" />
                 <span>High</span>
               </span>
-              <div className="text-lg sm:text-xl mt-1">
-                <AnimatedNumber value={data.highest} suffix="mg/dL" />
+              <div className="font-display font-extrabold text-base sm:text-lg text-on-surface leading-tight tabular-nums truncate w-full">
+                <AnimatedNumber value={data.highest} />
               </div>
+              <span className="text-[10px] font-semibold text-outline mt-0.5">mg/dL</span>
             </div>
 
             {/* Lowest */}
-            <div className="px-1">
-              <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 flex items-center justify-center space-x-1">
-                <ArrowDownRight className="w-3 h-3 text-emerald-500" />
+            <div className="p-2 sm:p-2.5 rounded-xl bg-surface-container-low/70 border border-outline-variant/30 flex flex-col items-center justify-between text-center min-w-0">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-outline flex items-center justify-center gap-1 mb-1">
+                <ArrowDownRight className="w-3 h-3 text-tertiary shrink-0" />
                 <span>Low</span>
               </span>
-              <div className="text-lg sm:text-xl mt-1">
-                <AnimatedNumber value={data.lowest} suffix="mg/dL" />
+              <div className="font-display font-extrabold text-base sm:text-lg text-on-surface leading-tight tabular-nums truncate w-full">
+                <AnimatedNumber value={data.lowest} />
               </div>
+              <span className="text-[10px] font-semibold text-outline mt-0.5">mg/dL</span>
             </div>
           </div>
 

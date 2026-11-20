@@ -238,7 +238,9 @@ export const Dashboard = ({ selectedDate, onDateChange, onOpenAuth }) => {
         {/* Right Column (8 cols): Ambulatory Glucose Profile (AGP) */}
         <div className="lg:col-span-8 xl:col-span-8 min-w-0">
           <AmbulatoryGlucoseProfileChart 
-            trendData={reports?.trend || []} 
+            trendData={reports?.trend || []}
+            dailyReadings={reports?.daily?.readings || readings || []}
+            reports={reports}
             onOpenLog={() => handleOpenAdd('Morning (fasting)')}
           />
         </div>

@@ -474,6 +474,16 @@ export const LandingPage = ({
                           <line x1="36" y1="90" x2="476" y2="90" stroke="var(--secondary-container, #feaeba)" strokeDasharray="3 3" strokeWidth="1.2" opacity="0.8" />
                           <line x1="36" y1="18" x2="476" y2="18" stroke="var(--outline-variant, #e0bfbe)" strokeDasharray="2 2" strokeWidth="1" opacity="0.5" />
 
+                          {/* Composed Range Bars (Matching Dashboard AGP Telemetry) */}
+                          <rect x="52" y="44" width="20" height="46" rx="4" fill="#fed7dc" />
+                          <rect x="116" y="40" width="20" height="50" rx="4" fill="#fed7dc" />
+                          <rect x="180" y="46" width="20" height="44" rx="4" fill="#fed7dc" />
+                          {/* Elevated Spike Bar (Thu 21 Excursion) */}
+                          <rect x="244" y="22" width="22" height="70" rx="4" fill="#ad2737" />
+                          <rect x="312" y="44" width="20" height="46" rx="4" fill="#fed7dc" />
+                          <rect x="376" y="40" width="20" height="50" rx="4" fill="#fed7dc" />
+                          <rect x="440" y="42" width="20" height="48" rx="4" fill="#fed7dc" />
+
                           {/* Corridor Y-Axis Labels */}
                           <text x="6" y="40" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="700">140</text>
                           <text x="12" y="94" fill="var(--secondary, #8a4c57)" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="10" fontWeight="700">70</text>
@@ -481,7 +491,7 @@ export const LandingPage = ({
 
                           {/* Continuous Smooth AGP Spline Curve */}
                           <path
-                            d="M 36,72 C 80,56 120,62 165,58 C 210,54 240,40 275,44 C 310,48 340,78 385,72 C 420,66 450,54 472,56"
+                            d="M 36,72 C 80,56 120,62 165,58 C 210,54 235,32 255,26 C 275,32 300,74 340,70 C 380,66 420,54 472,56"
                             fill="none"
                             stroke="url(#heroLineGrad)"
                             strokeLinecap="round"
@@ -493,15 +503,14 @@ export const LandingPage = ({
                           <circle cx="472" cy="56" r="5" fill="var(--primary, #ad2737)" />
                           <circle cx="472" cy="56" r="10" fill="var(--primary, #ad2737)" opacity="0.25" className="animate-ping" />
 
-                          {/* Excursion pin: Oatmeal + Protein marker */}
-                          <line x1="275" y1="20" x2="275" y2="44" stroke="var(--primary, #ad2737)" strokeDasharray="2 2" strokeWidth="1" opacity="0.6" />
-                          <circle cx="275" cy="44" r="4" fill="#ffffff" stroke="var(--primary, #ad2737)" strokeWidth="2.5" />
+                          {/* Excursion pin: Thu 21 Spike Marker */}
+                          <circle cx="255" cy="26" r="4.5" fill="#ffffff" stroke="var(--primary, #ad2737)" strokeWidth="3" />
                           
-                          {/* Badge Callout */}
-                          <g transform="translate(225, 4)">
-                            <rect x="0" y="0" width="102" height="18" rx="6" fill="var(--inverse-surface, #3d2c2f)" />
-                            <text x="51" y="12" fill="#ffffff" fontFamily="Inter, sans-serif" fontSize="8.5" fontWeight="700" textAnchor="middle">
-                              Oatmeal + Protein
+                          {/* Elevated Excursion Badge Callout */}
+                          <g transform="translate(196, 2)">
+                            <rect x="0" y="0" width="124" height="20" rx="6" fill="var(--inverse-surface, #3d2c2f)" />
+                            <text x="62" y="14" fill="#ffffff" fontFamily="Inter, sans-serif" fontSize="8" fontWeight="700" textAnchor="middle">
+                              Thu 21 • 158 mg/dL (Spike)
                             </text>
                           </g>
                         </svg>
@@ -509,11 +518,13 @@ export const LandingPage = ({
 
                       {/* Time Axis Bar */}
                       <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-[10px] pt-1">
-                        <span>00:00</span>
-                        <span>06:00</span>
-                        <span>12:00</span>
-                        <span>18:00</span>
-                        <span className="font-bold text-on-surface">Now (21:40)</span>
+                        <span>Mon 18</span>
+                        <span>Tue 19</span>
+                        <span>Wed 20</span>
+                        <span className="font-bold text-primary">Thu 21</span>
+                        <span>Fri 22</span>
+                        <span>Sat 23</span>
+                        <span className="font-bold text-on-surface">Today</span>
                       </div>
                     </div>
 
